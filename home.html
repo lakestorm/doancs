@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <nav>
+        <div class="toggle_menu"><i class="fa-solid fa-bars"></i></div>
+        <ul>
+            <li>
+                <a href=""><i class="fa-sharp fa-solid fa-house"></i>Trang chủ</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-right-to-bracket"></i>Đăng nhập</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-book"></i>Môn thi</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-phone"></i>Liên hệ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <h2>Nội dung ở đây</h2>
+    </section>
+</body>
+<script>
+    const nav =document.querySelector('nav');
+    const toggle_menu =document.querySelector('.toggle_menu');
+    const content =document.querySelector('.content');
+
+    toggle_menu.onclick =function(){
+        nav.classList.toggle('hide');
+        content.classList.toggle('expand')
+    }
+    
+</script>
+</html>

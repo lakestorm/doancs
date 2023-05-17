@@ -1,0 +1,116 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    position: relative;
+    width: 100%;
+    min-height: 150vh;
+}
+nav{
+    position:fixed;
+    width: 250px;
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgb(187, 169, 169); 
+    z-index: 20;
+    transition: ease-in-out 0.5s;
+}
+nav.hide{
+    width: 0;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+
+}
+nav ul li a{
+    width: 100%;
+    color:#1e90ff ;
+    display: inline-flex;
+    align-items: center;
+    padding: 25px 5px;
+    transition: linear 0.2s;
+    font-size: 1.2em; 
+    text-decoration: none;
+
+}
+nav ul li a i{
+    margin: 0 20px;
+    color: #1e90ff;
+    font-size: 1.8em;
+    transition: linear 0.2s;
+}
+
+nav ul li a:hover{
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover i{
+    color: #fff;
+    
+}
+.content{
+    position: absolute;
+    top :0;
+    left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: ease-in-out 0.5s;
+}
+.content.expand{
+    width: 100%;
+    left: 0;
+}
+
+.content h2{
+    font-size: 4.5em;
+    color: #1e90ff;
+    text-transform: uppercase;
+}
+
+nav .toggle_menu{
+    position: absolute;
+    top :20px;
+    right: -46px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+nav .toggle_menu i {
+    color: #1e90ff;
+    font-size: 1.5em;
+    transition: linear 0.2s;
+
+}
+nav .toggle_menu:hover{
+    background: #1e90ff;
+    
+}
+nav .toggle_menu:hover i{
+    color: #fff;
+}
+
