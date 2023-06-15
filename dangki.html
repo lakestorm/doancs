@@ -8,7 +8,7 @@
     <title>Đăng kí</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/rest.css">
-   
+
     <link rel="stylesheet" href="./css/dangnhap.css">
 </head>
 
@@ -29,47 +29,36 @@
             <li>
                 <a href="./dangki.html"><i class="fa-solid fa-key"></i>Đăng kí</a>
             </li>
-            <li>
-                <a href=""><i class="fa-solid fa-book"></i>Môn thi</a>
-                <ul>
-                    <li class="monhoc">Toán</li>
-                    <li class="monhoc">Lí</li>
-                    <li class="monhoc">Hóa</li>
-                    <li class="monhoc">Anh</li>
-                </ul>
-            </li>
-            <li>
-                <a href=""><i class="fa-solid fa-phone"></i>Liên hệ</a>
-            </li>
+            
         </ul>
     </nav>
 
     <section class="content-wrapper">
         <section class="content">
 
-            <form onsubmit="signup()" >
+            <form onsubmit="signup()">
                 <h3>Đăng kí</h3>
                 <div class="form-group">
-                    <input type="text" name="email" id="email" required> 
+                    <input type="text" name="email" id="email" required onfocusout="checkemail()">
                     <label for="">Email</label>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" required onfocusout="checkpassword()">
                     <label for="">Mật khẩu</label>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" id="password2" required>
+                    <input type="password" name="password" id="password2" required onshow="checkpassword()">
                     <label for="">Nhập lại mật khẩu</label>
                 </div>
-                
-                    <input type="submit" value="Đăng kí" id="bt-login" >
-                
-                
+
+                <input type="submit" value="Tạo tài khoản" id="bt-login">
+
+
                 <ul>
                     <li><a href="./dangnhap2.html">Bạn đã có tài khoản? <br>
-                    Đăng nhập</a></li>
-                   
+                            Đăng nhập</a></li>
+
                 </ul>
             </form>
         </section>
