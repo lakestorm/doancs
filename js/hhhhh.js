@@ -19,7 +19,7 @@ function signup (e) {
         var user =localStorage.getItem(email);
         var data =JSON.parse(user);
         if(user==null){
-            alert("Vui lòng không để trống ")
+            alert("Vui lòng không để trống")
         }
         else if(email== data.email && password==data.password){
             alert("Đăng nhập thành công")
