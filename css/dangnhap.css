@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    position: relative;
+    width: 100%;
+  
+}
+.navmenu{
+    position:fixed;
+    width: 250px;
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgb(187, 169, 169); 
+    z-index: 20;
+    transition: ease-in-out 0.5s;
+}
+.navmenu.hide{
+    width: 0;
+}
+
+.navmenu ul{
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+
+}
+.navmenu ul li a{
+    width: 100%;
+    color:#1e90ff ;
+    display: inline-flex;
+    align-items: center;
+    padding: 25px 5px;
+    transition: linear 0.2s;
+    font-size: 1.2em; 
+    text-decoration: none;
+
+}
+.navmenu ul li a i{
+    margin: 0 20px;
+    color: #1e90ff;
+    font-size: 1.8em;
+    transition: linear 0.2s;
+}
+
+.navmenu ul li a:hover{
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+}
+.navmenu ul li a:hover i{
+    color: #fff;
+    
+}
+.content{
+    position: absolute;
+    top :0;
+    left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: ease-in-out 0.5s;
+}
+.content-wrapper .expand{
+    width: 100%;
+    left: 0;
+}
+
+.content-wrapper h2{
+    font-size: 4.5em;
+    color: #1e90ff;
+    text-transform: uppercase;
+}
+
+.navmenu .toggle_menu{
+    position: absolute;
+    top :20px;
+    right: -46px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.navmenu .toggle_menu i {
+    color: #1e90ff;
+    font-size: 1.5em;
+    transition: linear 0.2s;
+
+}
+.navmenu .toggle_menu:hover{
+    background: #1e90ff;
+    
+}
+.navmenu .toggle_menu:hover i{
+    color: #fff;
+}
+
+
+
+
+    
+    .content{
+        font-family: 'Dancing Script', cursive;    /*chỉnh phông chữ*/
+        font-size: 20px;
+        background: url("../images/anhnendangnhap.jpg");
+        
+        
+    }
+    .content-wrapper{
+        display: flex;                     /* sap xep cac muc*/     
+        justify-content: center;            /*chphan noi dung ra giua*/
+        align-items: center;               /*sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các item bên trong container*/
+        min-height: 80vh;                  /*chieu cao tinh tu vien*/
+        
+    }
+    
+    form{
+        border: 1px solid rgb(110, 100, 100);
+        border-radius: 5px;
+        padding: 40px;
+        background: #fff;
+       
+    }
+    h3{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500px;
+    }
+    .form-group{
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .content-wrapper input{
+        width: 300px;
+        height: 40px;
+        border: 1px solid #dadce0;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: inherit;
+        color: #202124;
+        transition: all 0.3s ease-in-out;
+        outline: none;
+    }
+    .content-wrapper label{
+        position: absolute;
+        left: 5px;
+        padding: 0 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        pointer-events: none;         /*quan trong*/
+        transition: all 0.4s ease-in-out;
+    }
+    .form-group input:focus{
+        border: 2px solid #1a73e8;
+    }
+    .form-group input:focus + label, .form-group input:valid + label{
+        top: 0px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #1a73e8;
+    }
+    .content-wrapper input#bt-login{
+        background: #1a73e8;
+        color: #fff;
+        cursor: pointer;       /* chuyen con tro thanh hinh ban tay*/
+    }
+    .content-wrapper input#bt-login:hover{
+        opacity: 0.7;
+    }
+    .content-wrapper ul{
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+    }
+    .content-wrapper a{
+        text-decoration: none;
+        color: #3d65dd;
+    }
+    .content-wrapper li{
+        margin: 12px;
+    }
+    .content-wrapper li:first-child{
+        margin-left: -1px;
+        
+    }

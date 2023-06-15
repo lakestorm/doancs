@@ -1,129 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/rest.css">
+    <link rel="stylesheet" href="./js/menu.js">
+    <link rel="stylesheet" href="./css/dangnhap.css">
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap');
 
-    *{
-        box-sizing: border-box;      /*de có kích thức chính xác*/
-        
-       
-    }
-    body{
-        font-family: 'Montserrat', sans-serif;     /*chỉnh phông chữ*/
-        font-size: 20px;
-        background: url("images/anhnendangnhap.jpg");
-        
-        
-    }
-    #wrapper{
-        display: flex;                     /* sap xep cac muc*/     
-        justify-content: center;            /*chphan noi dung ra giua*/
-        align-items: center;               /*sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các item bên trong container*/
-        min-height: 80vh;                  /*chieu cao tinh tu vien*/
-        
-    }
-    
-    form{
-        border: 1px solid rgb(110, 100, 100);
-        border-radius: 5px;
-        padding: 40px;
-        background: #fff;
-       
-    }
-    h3{
-        text-align: center;
-        font-size: 30px;
-        font-weight: 500px;
-    }
-    .form-group{
-        margin-bottom: 15px;
-        position: relative;
-    }
-    input{
-        width: 300px;
-        height: 40px;
-        border: 1px solid #dadce0;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: inherit;
-        color: #202124;
-        transition: all 0.3s ease-in-out;
-        outline: none;
-    }
-    label{
-        position: absolute;
-        left: 5px;
-        padding: 0 5px;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #fff;
-        pointer-events: none;         /*quan trong*/
-        transition: all 0.4s ease-in-out;
-    }
-    .form-group input:focus{
-        border: 2px solid #1a73e8;
-    }
-    .form-group input:focus + label, .form-group input:valid + label{
-        top: 0px;
-        font-size: 15px;
-        font-weight: 500;
-        color: #1a73e8;
-    }
-    input#bt-login{
-        background: #1a73e8;
-        color: #fff;
-        cursor: pointer;       /* chuyen con tro thanh hinh ban tay*/
-    }
-    input#bt-login:hover{
-        opacity: 0.7;
-    }
-    ul{
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-
-    }
-    a{
-        text-decoration: none;
-        color: #3d65dd;
-    }
-    li{
-        margin: 12px;
-    }
-    li:first-child{
-        margin-left: -1px;
-        
-    }
-    
-</style>
 <body>
-    <div id="wrapper">
-        <form action="">
-            <h3>Đăng nhập</h3>
-           <div class="form-group">
-                <input type="text" name="email" required> 
-                <label for="">Email</label>
-            </div> 
 
-            <div class="form-group">
-                <input type="password" name="password" required>
-                <label for="">Mật khẩu</label>
-            </div>
+    <nav class="navmenu">
+        <div class="toggle_menu"><i class="fa-solid fa-bars"></i></div>
+        <ul>
+            <li>
+                <img src="./images/BH.png" alt="">
+            </li>
+            <li>
+                <a href="./home.html"><i class="fa-sharp fa-solid fa-house"></i>Trang chủ</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-right-to-bracket"></i>Đăng nhập</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-key"></i>Đăng kí</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-book"></i>Môn thi</a>
+                <ul>
+                    <li class="monhoc">Toán</li>
+                    <li class="monhoc">Lí</li>
+                    <li class="monhoc">Hóa</li>
+                    <li class="monhoc">Anh</li>
+                </ul>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-phone"></i>Liên hệ</a>
+            </li>
+        </ul>
+    </nav>
 
-            <input type="submit" value="Đăng nhập" id="bt-login">
-            <ul>
-                <li><a href="">Đăng kí</a></li>
-                <li><a href="">Quên mật khẩu?</a></li>
-            </ul>
-        </form>
-    </div>
-    
+    <section class="content-wrapper">
+        <section class="content">
+
+            <form action="">
+                <h3>Đăng nhập</h3>
+                <div class="form-group">
+                    <input type="text" name="email" required>
+                    <label for="">Email</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="password" required>
+                    <label for="">Mật khẩu</label>
+                </div>
+
+                <input type="submit" value="Đăng nhập" id="bt-login">
+                <ul>
+                    <li><a href="">Đăng kí</a></li>
+                    <li><a href="">Quên mật khẩu?</a></li>
+                </ul>
+            </form>
+        </section>
+    </section>
+
 </body>
+<script>
+    const nav = document.querySelector('nav');
+    const toggle_menu = document.querySelector('.toggle_menu');
+    const content = document.querySelector('.content');
+
+    toggle_menu.onclick = function () {
+        nav.classList.toggle('hide');
+        content.classList.toggle('expand')
+    }
+
+</script>
+
 </html>
