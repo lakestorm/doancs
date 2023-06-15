@@ -10,7 +10,7 @@ function signup (e) {
     }
     var json =JSON.stringify(user);
     localStorage.setItem(email ,json);
-    alert("Dang ki thanh cong");
+    alert("Đăng kí thành công");
 }
     function login (e) {
         event.preventDefault();
@@ -18,10 +18,13 @@ function signup (e) {
         var password =document.getElementById("password").value;
         var user =localStorage.getItem(email);
         var data =JSON.parse(user);
-        if(email== data.email && password==data.password){
-            alert("dang nhap thanh cong")
+        if(user==null){
+            alert("Vui lòng không để trống ")
+        }
+        else if(email== data.email && password==data.password){
+            alert("Đăng nhập thành công")
             window.location.href="home.html"
         }else{
-            alert("Sai email hoac mat khau");
+            alert("Sai email hoặc mật khẩu");
         }
     }
