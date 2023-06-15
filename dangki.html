@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
+    <title>Đăng kí</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/rest.css">
-    <link rel="stylesheet" href="./js/dangnhapdangki.js">
+   
     <link rel="stylesheet" href="./css/dangnhap.css">
 </head>
 
@@ -47,8 +47,8 @@
     <section class="content-wrapper">
         <section class="content">
 
-            <form  onsubmit="login()">
-                <h3>Đăng nhập</h3>
+            <form onsubmit="signup()" >
+                <h3>Đăng kí</h3>
                 <div class="form-group">
                     <input type="text" name="email" id="email">
                     <label for="">Email</label>
@@ -58,13 +58,18 @@
                     <input type="password" name="password" id="password">
                     <label for="">Mật khẩu</label>
                 </div>
+                <div class="form-group">
+                    <input type="password" name="password" id="password2">
+                    <label for="">Nhập lại mật khẩu</label>
+                </div>
                 
-                    <input type="submit" value="Đăng nhập" id="bt-login" >
+                    <input type="submit" value="Đăng kí" id="bt-login" >
                 
                 
                 <ul>
-                    <li><a href="./dangki.html">Đăng kí</a></li>
-                    <li><a href="">Quên mật khẩu?</a></li>
+                    <li><a href="./dangnhap2.html">Bạn đã có tài khoản? <br>
+                    Đăng nhập</a></li>
+                   
                 </ul>
             </form>
         </section>
@@ -80,6 +85,7 @@
         nav.classList.toggle('hide');
         content.classList.toggle('expand')
     }
+    
     function signup (e) {
     event.preventDefault();
     var email = document.getElementById("email").value;
@@ -94,20 +100,6 @@
     localStorage.setItem(email ,json);
     alert("Dang ki thanh cong");
 }
-    function login (e) {
-        event.preventDefault();
-        var email = document.getElementById("email").value;
-        var password =document.getElementById("password").value;
-        var user =localStorage.getItem(email);
-        var data =JSON.parse(user);
-        if(email== data.email && password==data.password){
-            alert("dang nhap thanh cong")
-            window.location.href="home.html"
-        }else{
-            alert("Sai email hoac mat khau");
-        }
-    }
-
 </script>
 
-</html> 
+</html>
