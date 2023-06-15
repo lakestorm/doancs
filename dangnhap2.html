@@ -8,7 +8,7 @@
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/rest.css">
-
+   
     <link rel="stylesheet" href="./css/dangnhap.css">
 </head>
 
@@ -47,21 +47,24 @@
     <section class="content-wrapper">
         <section class="content">
 
-            <form onsubmit="login()">
+            <form  onsubmit="login()">
                 <h3>Đăng nhập</h3>
                 <div class="form-group">
-                    <input type="text" name="email" id="email" required onfocusout="checkemail()">
+                    <input type="text" name="email" id="email" required onfocusout="checkemail()"> 
                     <label for="">Email</label>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" name="password" id="password" required onfocusout="checkpassword()">
+                    <input type="password"
+                           name="password" 
+                           id="password" 
+                           required onfocusout="checkpassword()">
                     <label for="">Mật khẩu</label>
                 </div>
-
-                <input type="submit" value="Đăng nhập" id="bt-login">
-
-
+                
+                    <input type="submit" value="Đăng nhập" id="bt-login" >
+                
+                
                 <ul>
                     <li><a href="./dangki.html">Đăng kí</a></li>
                     <li><a href="">Quên mật khẩu?</a></li>
@@ -80,9 +83,8 @@
         nav.classList.toggle('hide');
         content.classList.toggle('expand')
     }
-
+    
 
 </script>
 <script src="./js/hhhhh.js"></script>
-
-</html>
+</html> 
