@@ -8,7 +8,7 @@
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/rest.css">
-    <link rel="stylesheet" href="./js/dangnhapdangki.js">
+   
     <link rel="stylesheet" href="./css/dangnhap.css">
 </head>
 
@@ -50,12 +50,12 @@
             <form  onsubmit="login()">
                 <h3>Đăng nhập</h3>
                 <div class="form-group">
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="email" id="email" required>
                     <label for="">Email</label>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" required>
                     <label for="">Mật khẩu</label>
                 </div>
                 
@@ -80,34 +80,8 @@
         nav.classList.toggle('hide');
         content.classList.toggle('expand')
     }
-    function signup (e) {
-    event.preventDefault();
-    var email = document.getElementById("email").value;
-    var password =document.getElementById("password").value;
-
-    var user ={
-        email: email,
-        password: password,
-
-    }
-    var json =JSON.stringify(user);
-    localStorage.setItem(email ,json);
-    alert("Dang ki thanh cong");
-}
-    function login (e) {
-        event.preventDefault();
-        var email = document.getElementById("email").value;
-        var password =document.getElementById("password").value;
-        var user =localStorage.getItem(email);
-        var data =JSON.parse(user);
-        if(email== data.email && password==data.password){
-            alert("dang nhap thanh cong")
-            window.location.href="home.html"
-        }else{
-            alert("Sai email hoac mat khau");
-        }
-    }
+    
 
 </script>
-
+<script src="./js/hhhhh.js"></script>
 </html> 
