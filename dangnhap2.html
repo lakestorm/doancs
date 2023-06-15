@@ -50,13 +50,21 @@
             <form  onsubmit="login()">
                 <h3>Đăng nhập</h3>
                 <div class="form-group">
-                    <input type="text" name="email" id="email" required>
+                    <input type="text" name="email" id="email" required
+                    pattern="/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/" 
+                    title="Vui lòng nhập đúng định dạng gmail"> 
                     <label for="">Email</label>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" name="password" id="password" required>
-                    <label for="">Mật khẩu</label>
+                    <input type="password"
+                           name="password" 
+                           id="password" 
+                           required
+                           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+		                   title="Tối thiểu tám ký tự, ít nhất một chữ cái và một số">>
+                    
+                           <label for="">Mật khẩu</label>
                 </div>
                 
                     <input type="submit" value="Đăng nhập" id="bt-login" >

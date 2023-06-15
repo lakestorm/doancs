@@ -50,20 +50,28 @@
             <form onsubmit="signup()" >
                 <h3>Đăng kí</h3>
                 <div class="form-group">
-                    <input type="text" name="email" id="email" required> 
+                    <input type="text" name="email" id="email" required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                    title="Vui lòng nhập đúng định dạng gmail"> 
                     <label for="">Email</label>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" name="password" id="password" required>
-                    <label for="">Mật khẩu</label>
+                    <input type="password"
+                           name="password" 
+                           id="password" 
+                           required
+                           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+		                   title="Tối thiểu tám ký tự, ít nhất một chữ cái và một số">>
+                    
+                           <label for="">Mật khẩu</label>
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" id="password2" required>
                     <label for="">Nhập lại mật khẩu</label>
                 </div>
                 
-                    <input type="submit" value="Đăng kí" id="bt-login" >
+                    <input type="submit" value="Tạo tài khoản" id="bt-login" >
                 
                 
                 <ul>
