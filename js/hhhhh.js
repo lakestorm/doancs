@@ -23,7 +23,7 @@ function signup (e) {
         }
         else if(email== data.email && password==data.password){
             alert("Đăng nhập thành công")
-            window.location.href="home.html"
+            window.location.href="nhacuatoi.html"
         }else{
             alert("Sai email hoặc mật khẩu");
         }
