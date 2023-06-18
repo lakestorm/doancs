@@ -39,7 +39,7 @@
             <form  onsubmit="login()">
                 <h3>Đăng nhập</h3>
                 <div class="form-group">
-                    <input type="text" name="email" id="email" required onfocusout="checkemail()"> 
+                    <input type="text" name="email" id="email" pattern="^[A-Za-z][\w$.]+@[\w]+\.\w+$" title="không đúng" required> 
                     <label for="">Email</label>
                 </div>
 
@@ -47,7 +47,9 @@
                     <input type="password"
                            name="password" 
                            id="password" 
-                           required onfocusout="checkpassword()">
+                           required 
+                           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                           title="sai">
                     <label for="">Mật khẩu</label>
                 </div>
                 
