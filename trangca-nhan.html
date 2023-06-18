@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -99,4 +99,152 @@
         });
         </script>
 </body>
-</html>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/rest.css">
+   
+    <link rel="stylesheet" href="./css/trangca-nhan.css">
+</head>
+
+<body>
+
+    <nav class="navmenu">
+        <div class="toggle_menu"><i class="fa-solid fa-bars"></i></div>
+        <ul>
+            <li>
+                <img src="./images/BH.png" alt="">
+            </li>
+            <li>
+                <a href="./nhacuatoi.html"><i class="fa-sharp fa-solid fa-house"></i>Trang chủ</a>
+            </li>
+           
+            <li>
+                <a href="./trangca-nhan.html"><i class="fa-solid fa-person fa-2xl"></i>Trang cá nhân</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-book"></i>Môn thi</a>
+            </li>
+            <li>
+                <a href="./lienhe.html"><i class="fa-solid fa-phone"></i>Liên hệ</a>
+            </li>
+            <li>
+                <a href="./home.html"><i class="fa-solid fa-right-to-bracket"></i>Đăng xuất</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="content-wrapper">
+        <div class="wrapper">
+            <div class="content">
+                <table>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">Thông Tin Cá Nhân</td>
+                    </tr> 
+                    <tr>
+                        <td>Họ và Tên</td>
+                        <td>
+                            <input type="text" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Biệt Danh</td>
+                        <td>
+                            <input type="text" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td>
+                            <input type="text" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phân quyền</td>
+                        <td>
+                            <p class="p-quyen">free_user</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giới Tính</td>
+                        <td>
+                            <select name="" id="gioitinh" class="nhap">
+                                <option value="chon">--- Chọn ---</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sinh Ngày</td>
+                        <td><input type="date" class="nhap"></td>
+                    </tr>
+                    <tr>
+                        <td>Điện Thoại</td>
+                        <td>
+                            <input type="number" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Địa Chỉ</td>
+                        <td>
+                            <input type="text" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hình Đại Diện</td>
+                        <td>
+                            <p style="text-align: center;">Thay Hình Đại Diện</p>
+                            <div class="container-image">
+                                <div class="image-preview-container">
+                                  <img src="#" class="image-preview" id="image-preview">
+                                </div>
+                                <input type="file" id="image-upload" accept="image/*" class="file-input">
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <input type="submit" value="Sửa Thông Tin" class="suatt">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script>
+    const nav = document.querySelector('nav');
+    const toggle_menu = document.querySelector('.toggle_menu');
+    const content = document.querySelector('.content');
+
+    toggle_menu.onclick = function () {
+        nav.classList.toggle('hide');
+        content.classList.toggle('expand')
+    }
+    
+    document.getElementById('image-upload').addEventListener('change', function(event) {
+      var file = event.target.files[0];
+      var reader = new FileReader();
+    
+      reader.onload = function(e) {
+        var imagePreview = document.getElementById('image-preview');
+        imagePreview.src = e.target.result;
+      }
+    
+      reader.readAsDataURL(file);
+    });
+</script>
+
+
+</html> 
