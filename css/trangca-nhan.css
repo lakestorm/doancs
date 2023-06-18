@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,500&display=swap');
+body {
+  background: url("../images/aaa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
 .content-wrapper {
     font-family: 'Roboto', sans-serif;
+    backdrop-filter: none;
 }
 .text-primary {
     color: #337ab7;
@@ -11,18 +18,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .content {
-    width: 50%;
-    background: #ffffff;
+    width: 40%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 30px 40px;
+    padding: 1rem 1rem;
     box-sizing: border-box;
     border-radius: 8px;
-}
-.wrapper {
-    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(212, 212, 212, 0.1);
 }
 .nhap {
     width: 100%;
@@ -31,7 +38,6 @@
     border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 16px;
-    resize: vertical;
   }
 .container {
     border-radius: 5px;
@@ -50,11 +56,18 @@
     display: inline-block;
     cursor: pointer;
     box-shadow: none;
-    padding: 5px 10px;
+    padding: 8px 13px;
+    margin-top: 2rem;
+    font-size: 1rem;
     color: #fff;
     background-color: #3c8dbc;
     border-color: #367fa9;
     border-radius: 4px;
+}
+.ttcanhan {
+  text-align: center;
+  height: 6rem;
+  font-size: 1.3rem;
 }
 .image-preview {
     width: 60px;
