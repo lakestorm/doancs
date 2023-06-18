@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <!DOCTYPE html>
@@ -47,6 +48,22 @@
                 <table>
                     <tr>
                         <td colspan="2" style="text-align: center;">Thông Tin Cá Nhân</td>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đóng góp ý kiến</title>
+    <link rel="stylesheet" href="css/trangca-nhan.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="content">
+                <table>
+                    <tr>
+                        <td colspan="2" class="ttcanhan">Thông Tin Cá Nhân</td>
+>>>>>>> 2975ec482e3c681afe31ab8023eb61701bf2f2d1
                     </tr> 
                     <tr>
                         <td>Họ và Tên</td>
@@ -117,6 +134,7 @@
                     </tr>
                 </table>
             </div>
+<<<<<<< HEAD
         </div>
     </section>
 
@@ -146,3 +164,21 @@
 
 
 </html> 
+=======
+    </div>
+    <script>
+        document.getElementById('image-upload').addEventListener('change', function(event) {
+          var file = event.target.files[0];
+          var reader = new FileReader();
+        
+          reader.onload = function(e) {
+            var imagePreview = document.getElementById('image-preview');
+            imagePreview.src = e.target.result;
+          }
+        
+          reader.readAsDataURL(file);
+        });
+        </script>
+</body>
+</html>
+>>>>>>> 2975ec482e3c681afe31ab8023eb61701bf2f2d1
