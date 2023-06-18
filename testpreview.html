@@ -6,27 +6,28 @@
   <title>Document</title>
 </head>
 <body>
-  <input type="email" id="emailInput" placeholder="Email">
-<input type="password" id="passwordInput" placeholder="Mật khẩu">
-<button onclick="login()">Đăng nhập</button>
-<p id="error"></p>
-
-
+  <form id="feedbackForm">
+    <textarea id="feedbackInput" placeholder="Nhập ý kiến của bạn"></textarea>
+    <button type="submit">Gửi</button>
+  </form>
+  <p id="successMessage"></p>
+  
 </body>
 <script>
-  function login() {
-  var email = document.getElementById("emailInput").value;
-  var password = document.getElementById("passwordInput").value;
+document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Ngăn chặn sự kiện gửi mặc định của biểu mẫu
   
-  // Kiểm tra định dạng email
-  var emailRegex = /^\S+@\S+\.\S+$/;
-  if (!emailRegex.test(email)) {
-    document.getElementById("error").innerText = "Vui lòng nhập một địa chỉ email hợp lệ.";
-    return;
-  }
+  var feedback = document.getElementById("feedbackInput").value;
   
-  // Xử lý đăng nhập thành công
+  // Gửi ý kiến của người dùng (đây chỉ là ví dụ, không thực hiện thực tế)
+  // Thay thế đoạn mã sau đây bằng mã xử lý thực tế của bạn để gửi ý kiến đến máy chủ hoặc dịch vụ thích hợp
   // ...
-}
+  
+  // Hiển thị thông báo gửi thành công
+  document.getElementById("successMessage").innerText = "Ý kiến của bạn đã được gửi thành công!";
+  
+  // Đặt lại nội dung của trường nhập liệu
+  document.getElementById("feedbackInput").value = "";
+});
 </script>
 </html>

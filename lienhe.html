@@ -35,8 +35,10 @@
     </nav>
     <section class="content-wrapper">
         <div class="wrapper">
+           
             <div class="content">
-                <form action="">
+                <form action="" id="feedbackForm">
+                    <p id="successMessage"></p>
                     <h3 class="text-primary">Ý Kiến Của Bạn</h3>
                     <label for="hvt" class="lh-label">Họ Và Tên</label>
                     <input type="text" id="hvt" class="nhap">
@@ -45,7 +47,7 @@
                     <input type="text" id="dcemail" class="nhap">
         
                     <label for="yc" class="lh-label">Ý Kiến Của Bạn</label>
-                    <textarea id="yc" class="nhap"></textarea>
+                    <textarea id="yc" class="nhap" required></textarea>
         
                     <input type="submit" value="Gửi Ý Kiến" class="send">
                 </form>
@@ -53,6 +55,7 @@
         </div>
     </section>
 </body>
+<script src="./js/lienhe.js"></script>
 <script>
        const nav = document.querySelector('nav');
     const toggle_menu = document.querySelector('.toggle_menu');

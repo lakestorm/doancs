@@ -162,3 +162,16 @@ input{
     background-color: #f2f2f2;
     padding: 20px;
   }
+  
+  
+  
+  
+  
+  #successMessage {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+  }
+  .success-background {
+    background-color: lightgreen;
+  } 

@@ -58,3 +58,17 @@ function signup (e) {
         return false;  
         }  
         }  
+
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("password2").value;
+            
+            // Kiểm tra xem hai mật khẩu có khớp nhau hay không
+            if (password !== password2) {
+              document.getElementById("error").innerText = "Mật khẩu không khớp.";
+              return;
+            }
+            
+            // Xử lý khi mật khẩu khớp
+            // ...
+          }
