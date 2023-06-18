@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đóng góp ý kiến</title>
+    <link rel="stylesheet" href="css/trangca-nhan.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="wrapper">
+            <div class="content">
+                <table>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">Thông Tin Cá Nhân</td>
+                    </tr> 
+                    <tr>
+                        <td>Họ và Tên</td>
+                        <td>
+                            <input type="text" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Biệt Danh</td>
+                        <td>
+                            <input type="text" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td>
+                            <input type="text" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phân quyền</td>
+                        <td>
+                            <p class="p-quyen">free_user</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giới Tính</td>
+                        <td>
+                            <select name="" id="gioitinh" class="nhap">
+                                <option value="chon">--- Chọn ---</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sinh Ngày</td>
+                        <td><input type="date" class="nhap"></td>
+                    </tr>
+                    <tr>
+                        <td>Điện Thoại</td>
+                        <td>
+                            <input type="number" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Địa Chỉ</td>
+                        <td>
+                            <input type="text" class="nhap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hình Đại Diện</td>
+                        <td>
+                            <p style="text-align: center;">Thay Hình Đại Diện</p>
+                            <div class="container-image">
+                                <div class="image-preview-container">
+                                  <img src="#" class="image-preview" id="image-preview">
+                                </div>
+                                <input type="file" id="image-upload" accept="image/*" class="file-input">
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <input type="submit" value="Sửa Thông Tin" class="suatt">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('image-upload').addEventListener('change', function(event) {
+          var file = event.target.files[0];
+          var reader = new FileReader();
+        
+          reader.onload = function(e) {
+            var imagePreview = document.getElementById('image-preview');
+            imagePreview.src = e.target.result;
+          }
+        
+          reader.readAsDataURL(file);
+        });
+        </script>
+</body>
+</html>
