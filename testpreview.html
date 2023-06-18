@@ -6,28 +6,36 @@
   <title>Document</title>
 </head>
 <body>
-  <form id="feedbackForm">
-    <textarea id="feedbackInput" placeholder="Nhập ý kiến của bạn"></textarea>
-    <button type="submit">Gửi</button>
-  </form>
-  <p id="successMessage"></p>
-  
+  <div id="inputContainer">
+  <input type="text" id="input1" placeholder="Nhập dữ liệu 1">
+  <input type="text" id="input2" placeholder="Nhập dữ liệu 2">
+  <input type="text" id="input3" placeholder="Nhập dữ liệu 3">
+  <button onclick="saveData()">Lưu</button>
+</div>
+
 </body>
 <script>
-document.getElementById("feedbackForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Ngăn chặn sự kiện gửi mặc định của biểu mẫu
+function saveData() {
+  var input1Value = document.getElementById("input1").value;
+  var input2Value = document.getElementById("input2").value;
+  var input3Value = document.getElementById("input3").value;
   
-  var feedback = document.getElementById("feedbackInput").value;
+  // Lưu dữ liệu vào localStorage
+  localStorage.setItem("input1", input1Value);
+  localStorage.setItem("input2", input2Value);
+  localStorage.setItem("input3", input3Value);
+}
+
+// Khôi phục dữ liệu từ localStorage khi tải lại trang
+document.addEventListener("DOMContentLoaded", function() {
+  var input1Value = localStorage.getItem("input1");
+  var input2Value = localStorage.getItem("input2");
+  var input3Value = localStorage.getItem("input3");
   
-  // Gửi ý kiến của người dùng (đây chỉ là ví dụ, không thực hiện thực tế)
-  // Thay thế đoạn mã sau đây bằng mã xử lý thực tế của bạn để gửi ý kiến đến máy chủ hoặc dịch vụ thích hợp
-  // ...
-  
-  // Hiển thị thông báo gửi thành công
-  document.getElementById("successMessage").innerText = "Ý kiến của bạn đã được gửi thành công!";
-  
-  // Đặt lại nội dung của trường nhập liệu
-  document.getElementById("feedbackInput").value = "";
+  document.getElementById("input1").value = input1Value;
+  document.getElementById("input2").value = input2Value;
+  document.getElementById("input3").value = input3Value;
 });
+
 </script>
 </html>
