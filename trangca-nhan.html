@@ -51,19 +51,19 @@
                     <tr>
                         <td>Họ và Tên</td>
                         <td>
-                            <input type="text" class="nhap">
+                            <input type="text" class="nhap" id="input1">
                         </td>
                     </tr>
                     <tr>
                         <td>Biệt Danh</td>
                         <td>
-                            <input type="text" class="nhap">
+                            <input type="text" class="nhap" id="input2">
                         </td>
                     </tr>
                     <tr>
                         <td>E-mail</td>
                         <td>
-                            <input type="text" class="nhap">
+                            <input type="text" class="nhap" id="input3">
                         </td>
                     </tr>
                     <tr>
@@ -75,7 +75,7 @@
                     <tr>
                         <td>Giới Tính</td>
                         <td>
-                            <select name="" id="gioitinh" class="nhap">
+                            <select name="" id="gioitinh" class="nhap" id="input4">
                                 <option value="chon">--- Chọn ---</option>
                                 <option value="Nam">Nam</option>
                                 <option value="Nữ">Nữ</option>
@@ -84,18 +84,18 @@
                     </tr>
                     <tr>
                         <td>Sinh Ngày</td>
-                        <td><input type="date" class="nhap"></td>
+                        <td><input type="date" class="nhap" id="input5"></td>
                     </tr>
                     <tr>
-                        <td>Điện Thoại</td>
+                        <td>Số điện Thoại</td>
                         <td>
-                            <input type="number" class="nhap">
+                            <input type="number" class="nhap" id="input6">
                         </td>
                     </tr>
                     <tr>
                         <td>Địa Chỉ</td>
                         <td>
-                            <input type="text" class="nhap">
+                            <input type="text" class="nhap" id="input7">
                         </td>
                     </tr>
                     <tr>
@@ -112,7 +112,7 @@
                     </tr>
                     <tr>
                         <td colspan="2" style="text-align: center;">
-                            <input type="submit" value="Sửa Thông Tin" class="suatt">
+                            <input type="submit" value="Lưu Thông Tin" class="suatt" onclick="saveData()">
                         </td>
                     </tr>
                 </table>
@@ -122,6 +122,7 @@
     </section>
 
 </body>
+<script src="./js/luudl.js"></script>
 <script>
     const nav = document.querySelector('nav');
     const toggle_menu = document.querySelector('.toggle_menu');
@@ -143,6 +144,7 @@
     
       reader.readAsDataURL(file);
     });
+    
     
 </script>
 

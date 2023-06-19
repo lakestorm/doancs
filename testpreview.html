@@ -6,27 +6,36 @@
   <title>Document</title>
 </head>
 <body>
-  <input type="email" id="emailInput" placeholder="Email">
-<input type="password" id="passwordInput" placeholder="Mật khẩu">
-<button onclick="login()">Đăng nhập</button>
-<p id="error"></p>
-
+  <div id="inputContainer">
+  <input type="text" id="input1" placeholder="Nhập dữ liệu 1">
+  <input type="text" id="input2" placeholder="Nhập dữ liệu 2">
+  <input type="text" id="input3" placeholder="Nhập dữ liệu 3">
+  <button onclick="saveData()">Lưu</button>
+</div>
 
 </body>
 <script>
-  function login() {
-  var email = document.getElementById("emailInput").value;
-  var password = document.getElementById("passwordInput").value;
+function saveData() {
+  var input1Value = document.getElementById("input1").value;
+  var input2Value = document.getElementById("input2").value;
+  var input3Value = document.getElementById("input3").value;
   
-  // Kiểm tra định dạng email
-  var emailRegex = /^\S+@\S+\.\S+$/;
-  if (!emailRegex.test(email)) {
-    document.getElementById("error").innerText = "Vui lòng nhập một địa chỉ email hợp lệ.";
-    return;
-  }
-  
-  // Xử lý đăng nhập thành công
-  // ...
+  // Lưu dữ liệu vào localStorage
+  localStorage.setItem("input1", input1Value);
+  localStorage.setItem("input2", input2Value);
+  localStorage.setItem("input3", input3Value);
 }
+
+// Khôi phục dữ liệu từ localStorage khi tải lại trang
+document.addEventListener("DOMContentLoaded", function() {
+  var input1Value = localStorage.getItem("input1");
+  var input2Value = localStorage.getItem("input2");
+  var input3Value = localStorage.getItem("input3");
+  
+  document.getElementById("input1").value = input1Value;
+  document.getElementById("input2").value = input2Value;
+  document.getElementById("input3").value = input3Value;
+});
+
 </script>
 </html>

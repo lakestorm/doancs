@@ -19,7 +19,7 @@ function signup (e) {
         var user =localStorage.getItem(email);
         var data =JSON.parse(user);
         if(user==null){
-            alert("Vui lòng không để trống")
+            alert("Sai email hoặc mật khẩu")
         }
         else if(email== data.email && password==data.password){
             alert("Đăng nhập thành công")
@@ -58,3 +58,17 @@ function signup (e) {
         return false;  
         }  
         }  
+
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("password2").value;
+            
+            // Kiểm tra xem hai mật khẩu có khớp nhau hay không
+            if (password !== password2) {
+              document.getElementById("error").innerText = "Mật khẩu không khớp.";
+              return;
+            }
+            
+            // Xử lý khi mật khẩu khớp
+            // ...
+          }
