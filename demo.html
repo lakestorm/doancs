@@ -1,84 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Thông tin cá nhân</title>
-  <script>
-    // Hàm để lưu trữ thông tin vào localStorage
-    function saveInfo() {
-      var fullName = document.getElementById('fullName').value;
-      var dateOfBirth = document.getElementById('dateOfBirth').value;
-      var gender = document.querySelector('input[name="gender"]:checked').value;
-      var phoneNumber = document.getElementById('phoneNumber').value;
-      
-      // Lưu trữ thông tin vào localStorage
-      localStorage.setItem('fullName', fullName);
-      localStorage.setItem('dateOfBirth', dateOfBirth);
-      localStorage.setItem('gender', gender);
-      localStorage.setItem('phoneNumber', phoneNumber);
+  <title>Ví dụ MathJax</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <style>
+    .math-equation {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 5px;
     }
-    
-    // Hàm để khôi phục thông tin từ localStorage
-    function restoreInfo() {
-      // Kiểm tra xem liệu có thông tin đã lưu trong localStorage hay không
-      if (localStorage.getItem('fullName')) {
-        document.getElementById('fullName').value = localStorage.getItem('fullName');
-      }
-      if (localStorage.getItem('dateOfBirth')) {
-        document.getElementById('dateOfBirth').value = localStorage.getItem('dateOfBirth');
-      }
-      if (localStorage.getItem('gender')) {
-        var gender = localStorage.getItem('gender');
-        var genderRadios = document.getElementsByName('gender');
-        for (var i = 0; i < genderRadios.length; i++) {
-          if (genderRadios[i].value === gender) {
-            genderRadios[i].checked = true;
-          }
-        }
-      }
-      if (localStorage.getItem('phoneNumber')) {
-        document.getElementById('phoneNumber').value = localStorage.getItem('phoneNumber');
-      }
-    }
-    
-    // Hàm để xóa thông tin khỏi localStorage
-    function clearInfo() {
-      localStorage.clear();
-      location.reload(); // Tải lại trang để đặt lại các trường input
-    }
-  </script>
+  </style>
 </head>
-<body onload="restoreInfo()">
-  <h1>Thông tin cá nhân</h1>
-  <form>
-    <label for="fullName">Họ và tên:</label>
-    <input type="text" id="fullName" required><br>
-    
-    <label for="dateOfBirth">Ngày sinh:</label>
-    <input type="date" id="dateOfBirth" required><br>
-    
-    <label for="gender">Giới tính:</label>
-    <input type="radio" name="gender" value="Nam" required>Nam
-    <input type="radio" name="gender" value="Nữ" required>Nữ<br>
-    
-    <label for="phoneNumber">Số điện thoại:</label>
-    <input type="tel" id="phoneNumber" required><br>
-    
-    <button type="button" onclick="saveInfo()">Cập nhật</button>
-    <button type="button" onclick="clearInfo()">Tắt và chạy lại</button>
-  </form>
-  
-  <h2>Thông tin đã nhập:</h2>
-  <p>Họ và tên: <span id="displayFullName"></span></p>
-  <p>Ngày sinh: <span id="displayDateOfBirth"></span></p>
-  <p>Giới tính: <span id="displayGender"></span></p>
-  <p>Số điện thoại: <span id="displayPhoneNumber"></span></p>
-  
-  <script>
-    // Hiển thị thông tin đã lưu từ localStorage
-    document.getElementById('displayFullName').textContent = localStorage.getItem('fullName');
-    document.getElementById('displayDateOfBirth').textContent = localStorage.getItem('dateOfBirth');
-    document.getElementById('displayGender').textContent = localStorage.getItem('gender');
-    document.getElementById('displayPhoneNumber').textContent = localStorage.getItem('phoneNumber');
-  </script>
+<body>
+  <div class="math-equation">
+    \((x^2) + 2 = 5\)  
+  </div>
 </body>
 </html>

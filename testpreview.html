@@ -1,41 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Bài trắc nghiệm</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    .quiz-container {
+      width: 600px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+      margin-bottom: 10px;
+    }
+    
+    .correct {
+      color: green;
+    }
+    
+    .incorrect {
+      color: red;
+    }
+    
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    
+    .btn-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .btn-container button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    
+    #slider {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <div id="inputContainer">
-  <input type="text" id="input1" placeholder="Nhập dữ liệu 1">
-  <input type="text" id="input2" placeholder="Nhập dữ liệu 2">
-  <input type="text" id="input3" placeholder="Nhập dữ liệu 3">
-  <button onclick="saveData()">Lưu</button>
-</div>
-
+  <h1>Bài trắc nghiệm</h1>
+  
+  <div id="questions">
+    <div class="question" id="question1">
+      <p>1. Câu hỏi số 1: Câu trả lời đúng là gì?</p>
+      <input type="radio" name="question1" value="A"> A. Đáp án A<br>
+      <input type="radio" name="question1" value="B"> B. Đáp án B<br>
+      <input type="radio" name="question1" value="C"> C. Đáp án C<br>
+      <input type="button" value="Kiểm tra" onclick="checkAnswer('question1', 'B')">
+      <p id="result1"></p>
+    </div>
+    
+    <div class="question" id="question2">
+      <p>2. Câu hỏi số 2: Câu trả lời đúng là gì?</p>
+      <input type="radio" name="question2" value="A"> A. Đáp án A<br>
+      <input type="radio" name="question2" value="B"> B. Đáp án B<br>
+      <input type="radio" name="question2" value="C"> C. Đáp án C<br>
+      <input type="button" value="Kiểm tra" onclick="checkAnswer('question2', 'A')">
+      <p id="result2"></p>
+    </div>
+  </div>
+  
+  <input type="button" value="Lùi" onclick="previousQuestion()" id="previousBtn" disabled>
+  <input type="button" value="Tiến tới" onclick="nextQuestion()" id="nextBtn">
+  
+  <script>
+    var currentQuestion = 1;
+    var totalQuestions = document.querySelectorAll('.question').length;
+    
+    var previousBtn = document.getElementById('previousBtn');
+    var nextBtn = document.getElementById('nextBtn');
+    
+    function showQuestion(questionNumber) {
+      var questions = document.getElementById('questions');
+      
+      for (var i = 0; i < totalQuestions; i++) {
+        var question = document.getElementById('question' + (i + 1));
+        
+        if (i + 1 === questionNumber) {
+          question.style.display = 'block';
+        } else {
+          question.style.display = 'none';
+        }
+      }
+      
+      currentQuestion = parseInt(questionNumber);
+      updateButtons();
+      clearResults();
+    }
+    
+    function previousQuestion() {
+      if (currentQuestion > 1) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+      }
+    }
+    
+    function nextQuestion() {
+      if (currentQuestion < totalQuestions) {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+      }
+    }
+    
+    function checkAnswer(question, correctAnswer) {
+      var selectedAnswer = document.querySelector('input[name="' + question + '"]:checked').value;
+      var resultElement = document.getElementById('result' + question.slice(-1));
+      
+      if (selectedAnswer === correctAnswer) {
+        resultElement.innerHTML = "Đúng!";
+        resultElement.className = "correct";
+      } else {
+        resultElement.innerHTML = "Sai!";
+        resultElement.className = "incorrect";
+      }
+    }
+    
+    function clearResults() {
+      for (var i = 0; i < totalQuestions; i++) {
+        var result = document.getElementById('result' + (i + 1));
+        result.innerHTML = '';
+        result.className = '';
+      }
+    }
+    
+    function updateButtons() {
+      previousBtn.disabled = (currentQuestion === 1);
+      nextBtn.disabled = (currentQuestion === totalQuestions);
+    }
+    
+    showQuestion(currentQuestion);
+  </script>
 </body>
-<script>
-function saveData() {
-  var input1Value = document.getElementById("input1").value;
-  var input2Value = document.getElementById("input2").value;
-  var input3Value = document.getElementById("input3").value;
-  
-  // Lưu dữ liệu vào localStorage
-  localStorage.setItem("input1", input1Value);
-  localStorage.setItem("input2", input2Value);
-  localStorage.setItem("input3", input3Value);
-}
-
-// Khôi phục dữ liệu từ localStorage khi tải lại trang
-document.addEventListener("DOMContentLoaded", function() {
-  var input1Value = localStorage.getItem("input1");
-  var input2Value = localStorage.getItem("input2");
-  var input3Value = localStorage.getItem("input3");
-  
-  document.getElementById("input1").value = input1Value;
-  document.getElementById("input2").value = input2Value;
-  document.getElementById("input3").value = input3Value;
-});
-
-</script>
 </html>
