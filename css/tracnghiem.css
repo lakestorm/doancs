@@ -1,26 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
-body {
+
+*{
+    box-sizing: border-box;
+    
+    padding: 0;
+    margin: 0;
+   
+  }
+.content {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
     background-color: #f1f1f1;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif !important;
-    background-image: url(../images/background_nentracnghiem.webp);
+    background: url(../images/background_nentracnghiem.webp) ;
     background-size: cover;
+    position: absolute;
+    top :0;
+    left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    padding: 20px;
+    transition: ease-in-out 0.5s;
   }
-  #header{
+
+
+   #header{
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  h2{
+  h1{
     color: #007bff;
   }
-  #content{
+  #content-main{
     border: 2px solid #3490dc;
     padding:  80px 60px;
     border-radius: 10px;
@@ -39,9 +56,7 @@ body {
   }
 
   
-  input{
-    margin-top: 20px;
-  }
+ 
   .correct {
     color: #fff;
     background-color: green ;
@@ -90,13 +105,14 @@ body {
   input{
     border-radius: 5px; 
     color: #007bff;
-    
+    margin-top: 20px;
   }
   .check{
     background-color: #007bff;
     color:#fff;
     border: 2px solid black;
     width: 140px;
+    height: 35px;
 }
 #previousBtn{
  margin-right: 10px ;
@@ -104,4 +120,103 @@ body {
 }
 #nextBtn{
     width: 100px;
-}
+} 
+
+
+
+
+input{
+    font-family: 'Roboto', sans-serif !important;
+  }
+  .navmenu{
+    position:fixed;
+    width: 250px;
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgb(187, 169, 169); 
+    z-index: 20;
+    transition: ease-in-out 0.5s;
+    font-family: 'Dancing Script', cursive !important;
+    font-size: larger;
+  }
+  .navmenu.hide{
+    width: 0;
+  }
+  
+  .navmenu ul{
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+  
+  }
+  .navmenu ul li a{
+    width: 100%;
+    color:#1e90ff ;
+    display: inline-flex;
+    align-items: center;
+    padding: 25px 5px;
+    transition: linear 0.2s;
+    font-size: 1.2em; 
+    text-decoration: none;
+  
+  }
+  .navmenu ul li a i{
+    margin: 0 20px;
+    color: #1e90ff;
+    font-size: 1.5em;
+    transition: linear 0.2s;
+  }
+  
+  .navmenu ul li a:hover{
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+  }
+  .navmenu ul li a:hover i{
+    color: #fff;
+    
+  }
+  
+  .content-wrapper .expand{
+    width: 100%;
+    left: 0;
+  }
+  
+  .content-wrapper h2{
+    font-size: 4.5em;
+    color: #1e90ff;
+    text-transform: uppercase;
+    
+  }
+  
+  .navmenu .toggle_menu{
+    position: absolute;
+    top :20px;
+    right: -46px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    transition: linear 0.2s;
+  }
+  
+  .navmenu .toggle_menu i {
+    color: #1e90ff;
+    font-size: 1.2em;
+    transition: linear 0.2s;
+  
+  }
+  .navmenu .toggle_menu:hover{
+    background: #1e90ff;
+    
+  }
+  .navmenu .toggle_menu:hover i{
+    color: #fff;
+  }
+  
