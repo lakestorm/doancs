@@ -8,9 +8,12 @@
   margin: 0;
  
 }
-body{
+body {
   position: relative;
   width: 100%;
+  background: url("/images/aaa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
 input{
