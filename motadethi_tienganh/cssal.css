@@ -1,0 +1,31 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+    background: url(../images/background_nentracnghiem.webp) ;
+    background-size: cover;
+    
+  }
+  #content-main{
+    border: 2px solid #3490dc;
+    padding:  80px 60px;
+    border-radius: 10px;
+    width: 1100px;
+    background-color: #fff;
+  }
+  img{
+    width: 1150px;
+
+  }
+  #close-cart {
+    position: absolute;
+    color: tomato;
+    top: 30px;
+    right: 110px;
+    font-size: 1cm;
+    cursor: pointer;
+  }
