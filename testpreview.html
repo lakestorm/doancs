@@ -1,64 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Website Chính</title>
-  <style>
-    /* Style cho layout chính */
-    .main-layout {
-      width: 500px;
-      height: 300px;
-      background-color: lightblue;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Style cho layout nhỏ */
-    .small-layout {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      height: 200px;
-      background-color: lightgreen;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      display: none;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/rest.css">
 </head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+
+  * {
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+
+  }
+
+  body {
+    position: relative;
+    width: 100%;
+    background: url("/images/aaa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
+  input {
+    font-family: 'Roboto', sans-serif !important;
+  }
+
+  .navmenu {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgb(187, 169, 169);
+    z-index: 20;
+    transition: ease-in-out 0.5s;
+    font-family: 'Dancing Script', cursive;
+    font-size: larger;
+  }
+
+  .navmenu.hide {
+    width: 0;
+  }
+
+  .navmenu ul {
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+
+  }
+
+  .navmenu ul li a {
+    width: 100%;
+    color: #1e90ff;
+    display: inline-flex;
+    align-items: center;
+    padding: 25px 5px;
+    transition: linear 0.2s;
+    font-size: 1.2em;
+    text-decoration: none;
+
+  }
+
+  .navmenu ul li a i {
+    margin: 0 20px;
+    color: #1e90ff;
+    font-size: 1.8em;
+    transition: linear 0.2s;
+  }
+
+  .navmenu ul li a:hover {
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+  }
+
+  .navmenu ul li a:hover i {
+    color: #fff;
+
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: ease-in-out 0.5s;
+  }
+
+  .content-wrapper .expand {
+    width: 100%;
+    left: 0;
+  }
+
+  .content-wrapper h2 {
+    font-size: 4.5em;
+    color: #1e90ff;
+    text-transform: uppercase;
+
+  }
+
+  .navmenu .toggle_menu {
+    position: absolute;
+    top: 20px;
+    right: -46px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    transition: linear 0.2s;
+  }
+
+  .navmenu .toggle_menu i {
+    color: #1e90ff;
+    font-size: 1.5em;
+    transition: linear 0.2s;
+
+  }
+
+  .navmenu .toggle_menu:hover {
+    background: #1e90ff;
+
+  }
+
+  .navmenu .toggle_menu:hover i {
+    color: #fff;
+  }
+  
+.navmenu ul li .sub-menu {
+  display: none;
+  background-color: #f1f1f1;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 250px;
+}
+
+.navmenu ul li .sub-menu {
+  display: none;
+  background-color: #f1f1f1;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 250px;
+  border:1px solid #1e90ff;
+}
+
+.navmenu ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  top: 547px;
+  left: 100%;
+}
+
+.navmenu ul li .sub-menu li {
+  border-bottom: 1px solid rgb(187, 169, 169);
+}
+
+.navmenu ul li .sub-menu li:last-child {
+  border-bottom: none;
+}
+
+.navmenu ul li .sub-menu li a {
+  color: #1e90ff;
+  display: block;
+  padding: 10px 20px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: linear 0.2s;
+}
+
+.navmenu ul li .sub-menu li a:hover {
+  background-color: #1e90ff;
+  color: white;
+}
+
+
+</style>
+
 <body>
-  <!-- Layout chính -->
-  <div class="main-layout">
-    <a href="#" onclick="openSmallLayout()">Click vào đây</a>
-  </div>
+  <nav class="navmenu">
+    <div class="toggle_menu"><i class="fa-solid fa-bars"></i></div>
+    <ul>
+      <li>
+        <img src="./images/BH.png" alt="">
+      </li>
+      <li>
+        <a href="./nhacuatoi.html"><i class="fa-sharp fa-solid fa-house"></i>Trang chủ</a>
+      </li>
 
-  <!-- Layout nhỏ -->
-  <div class="small-layout" id="smallLayout">
-    <button class="close-btn" onclick="closeSmallLayout()">Đóng</button>
-    <h2>Layout nhỏ</h2>
-    <p>Nội dung layout nhỏ ở đây</p>
-  </div>
+      <li>
+        <a href="./trangca-nhan.html"><i class="fa-solid fa-person fa-2xl"></i>Trang cá nhân</a>
+      </li>
+      
+        
+      <li>
+        <a href=""><i class="fa-solid fa-book"></i>Môn thi</a>
+        <ul class="sub-menu">
+          <li><a href="#">Môn 1</a></li>
+          <li><a href="#">Môn 2</a></li>
+          <li><a href="#">Môn 3</a></li>
+          <!-- Thêm các mục môn thi khác tại đây -->
+        </ul>
+      </li>
+      
 
-  <script>
-    function openSmallLayout() {
-      var smallLayout = document.getElementById('smallLayout');
-      smallLayout.style.display = 'block';
-    }
+      </li>
+      <li>
+        <a href="./lienhe.html"><i class="fa-solid fa-phone"></i>Liên hệ</a>
+      </li>
+      <li>
+        <a href="./home.html"><i class="fa-solid fa-right-to-bracket"></i>Đăng xuất</a>
+      </li>
+    </ul>
+  </nav>
 
-    function closeSmallLayout() {
-      var smallLayout = document.getElementById('smallLayout');
-      smallLayout.style.display = 'none';
-    }
-  </script>
 </body>
+<script>
+  const nav = document.querySelector('nav');
+  const toggle_menu = document.querySelector('.toggle_menu');
+  const content = document.querySelector('.content');
+
+  toggle_menu.onclick = function () {
+    nav.classList.toggle('hide');
+    content.classList.toggle('expand')
+  }
+
+</script>
+
 </html>
