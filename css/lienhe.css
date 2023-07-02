@@ -121,6 +121,46 @@ input{
   color: #fff;
 }
 
+.navmenu ul li .sub-menu {
+  display: none;
+  background-color: #f1f1f1;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 250px;
+  border:1px solid #1e90ff;
+  font-size: 25px;
+}
+
+.navmenu ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  top: 547px;
+  left: 100%;
+}
+
+.navmenu ul li .sub-menu li {
+  border-bottom: 1px solid rgb(187, 169, 169);
+}
+
+.navmenu ul li .sub-menu li:last-child {
+  border-bottom: none;
+}
+
+.navmenu ul li .sub-menu li a {
+  color: #1e90ff;
+  display: block;
+  padding: 10px 20px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: linear 0.2s;
+}
+
+.navmenu ul li .sub-menu li a:hover {
+  background-color: #1e90ff;
+  color: white;
+}
+
 
 
 

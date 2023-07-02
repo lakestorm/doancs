@@ -1,64 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Website Chính</title>
-  <style>
-    /* Style cho layout chính */
-    .main-layout {
-      width: 500px;
-      height: 300px;
-      background-color: lightblue;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Style cho layout nhỏ */
-    .small-layout {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      height: 200px;
-      background-color: lightgreen;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      display: none;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+<style>
+  .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+</style>
 <body>
-  <!-- Layout chính -->
-  <div class="main-layout">
-    <a href="#" onclick="openSmallLayout()">Click vào đây</a>
+  <button id="openPopup">Mở Popup</button>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2>Popup Content</h2>
+    <p>Đây là nội dung của popup.</p>
+    <button id="closePopup">Đóng Popup</button>
   </div>
+</div>
 
-  <!-- Layout nhỏ -->
-  <div class="small-layout" id="smallLayout">
-    <button class="close-btn" onclick="closeSmallLayout()">Đóng</button>
-    <h2>Layout nhỏ</h2>
-    <p>Nội dung layout nhỏ ở đây</p>
-  </div>
+<div id="overlay" class="overlay"></div>
 
-  <script>
-    function openSmallLayout() {
-      var smallLayout = document.getElementById('smallLayout');
-      smallLayout.style.display = 'block';
-    }
-
-    function closeSmallLayout() {
-      var smallLayout = document.getElementById('smallLayout');
-      smallLayout.style.display = 'none';
-    }
-  </script>
 </body>
+<script>
+  const openPopupBtn = document.getElementById('openPopup');
+const closePopupBtn = document.getElementById('closePopup');
+const popup = document.getElementById('popup');
+const overlay = document.getElementById('overlay');
+
+openPopupBtn.addEventListener('click', function() {
+  popup.style.display = 'block';
+  overlay.style.display = 'block';
+});
+
+closePopupBtn.addEventListener('click', function() {
+  popup.style.display = 'none';
+  overlay.style.display = 'none';
+});
+
+</script>
 </html>
