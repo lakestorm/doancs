@@ -12,10 +12,19 @@
         <div id="tittle">
             <h3>Thi Thử Đề Thi THPT Quốc Gia</h3>
             <h4>Đề thi thử môn Sinh 2020, THPT Lý Thường Kiệt - Bắc Ninh lần 1</h4>
-            <button class="btn-start" id="btn-start">
+            <button class="btn-start" id="btn-start" onclick="openPopup()">
                 <i class="fa-regular fa-pen-to-square"></i>
                 <b>BẮT ĐẦU LÀM BÀI</b>
             </button>
+            <div class="popup" id="popup">
+                <h2>Chú Ý</h2>
+                <hr>
+                <p>Thời gian làm bài sẽ bắt đầu tính. Khi thời gian làm bài còn 2 phút, đồng hồ sẽ chuyển sang màu đỏ. Bạn nên chọn câu trả lời cho các câu hỏi còn lại, và nộp bài. Sau khi hết thời gian bạn không thể thay đổi câu trả lời. Kết quả sẽ xuất hiện sau khi bạn ấn Nộp Bài.</p>
+                <div class="btn-bt">
+                    <button type="button" class="btn-huy" onclick="closePopup()">Trở Về</button>
+                    <button type="button" class="btn-batdau" onclick="chuyentrang()">Bắt Đầu</button>
+                </div>
+             </div>
         </div>
         <div id="detail">
             <div class="kgiandetail">
@@ -100,13 +109,19 @@
     </section>
 </body>
 <script>
-  // Lấy tham chiếu đến nút
-  var button = document.getElementById("btn-start");
+    let popup = document.getElementById("popup");
 
-  // Gắn sự kiện click vào nút
-  button.addEventListener("click", function() {
-    // Mở cửa sổ pop-up
-    window.open("https://www.example.com", "popup", "width=400,height=300");
-  });
-</script>
+    function openPopup() {
+        event.preventDefault();
+        popup.classList.add("open-popup");
+    }
+    function closePopup() {
+        event.preventDefault();
+        window.location.href = "sinh_batdau.html";
+    }
+    function chuyentrang() {
+        event.preventDefault();
+        window.location.href = "home.html";
+    }
+ </script>
 </html>

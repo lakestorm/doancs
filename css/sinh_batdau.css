@@ -27,6 +27,55 @@ h4 {
     color: #fff;
     border-radius: 3px;
 }
+.popup h2 {
+    font-size: 1.3rem;
+}
+.popup p {
+    text-align: left;
+}
+.popup {
+    line-height: 1.4;
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0px 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup {
+    visibility: visible;
+    top: 30%;
+    transform: translate(-50%, -50%) scale(1);
+    position: fixed;
+}
+.btn-batdau {
+    background-color: limegreen;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-batdau:hover {
+    background-color: #008d4c;
+}
+.btn-huy {
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-huy:hover {
+    background-color: #5a6268;
+}
+.btn-batdau, .btn-huy {
+    border: none;
+    border-radius: 3px;
+    padding: 6px 10px;
+    font-weight: 600;
+}
 .btn-start:hover {
     background-color: #008d4c;
 }
