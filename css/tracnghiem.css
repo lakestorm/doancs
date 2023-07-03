@@ -35,7 +35,9 @@
     align-items: center;
   }
   h1{
+    font-size: 22px;
     color: #007bff;
+    padding-bottom: 30px;
   }
   h3 {
     font-size: 1.2rem;
