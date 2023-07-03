@@ -3,18 +3,41 @@
 // Mảng chứa các câu hỏi
 var questions = [
   {
-    question: 'Cho phép lai P: AaBbDdEe x AaBbDdEe. Tính xác suất kiểu gen có 6 alen trội ở F1:',
-    answers: ["A. 7/64", "B. 9/64", "C. 15/64", "D. 12/64"],
-    correctAnswerIndex: 1,
+    question: 'Cơ quan nào sau đây của thực vật sống trên cạn có chức năng hút nước từ đất?',
+    answers: ["A. Rễ.", "B. Thân", "C. Hoa", "D. Lá"],
+    correctAnswerIndex: 0,
     difficulty: "Dễ"
   },
   {
-    question: "Câu hỏi 2",
-    answers: ["Đáp án A", "Đáp án B", "Đáp án C", "Đáp án D"],
-    correctAnswerIndex: 0,
-    difficulty: "Trung bình"
+    question: "Động vật nào sau đây hô hấp bằng mang?",
+    answers: ["A. Thằn lằn", "B. Ếch đồng", "C. Cá chép", "D. Sư tử"],
+    correctAnswerIndex: 2,
+    difficulty: "Dễ"
   },
-  // Thêm câu hỏi khác vào đây
+  {
+    question: "",
+    answers: ["", "", "", ""],
+    correctAnswerIndex: 2,
+    difficulty: ""
+  },
+  {
+    question: "",
+    answers: ["", "", "", ""],
+    correctAnswerIndex: 2,
+    difficulty: ""
+  },
+  {
+    question: "",
+    answers: ["", "", "", ""],
+    correctAnswerIndex: 2,
+    difficulty: ""
+  },
+  {
+    question: "",
+    answers: ["", "", "", ""],
+    correctAnswerIndex: 2,
+    difficulty: ""
+  },
 ];
 
 // Biến chỉ mục câu hỏi hiện tại
