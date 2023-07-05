@@ -326,7 +326,7 @@ function generateQuestionButtons(totalQuestions) {
   var buttonsHTML = "";
   for (var i = 0; i < totalQuestions; i++) {
     buttonsHTML += `
-      <button onclick="goToQuestionIndex(${i})" ${currentQuestionIndex === i ? 'class="active"' : ''}>${i + 1}</button>
+      <button class="ttcau" onclick="goToQuestionIndex(${i})" ${currentQuestionIndex === i ? 'class="active"' : ''}>${i + 1}</button>
     `;
   }
   return buttonsHTML;

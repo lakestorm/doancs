@@ -231,3 +231,7 @@ input{
   .navmenu .toggle_menu:hover i{
     color: #fff;
   }
+  .ttcau {
+    width: 50px;
+    height: 30px;
+  }
