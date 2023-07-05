@@ -339,8 +339,12 @@ function checkAnswer(questionIndex, correctAnswerIndex) {
 
   if (selectedOption && selectedOption.value === questions[questionIndex - 1].answers[correctAnswerIndex]) {
     resultElement.textContent = "Đáp án đúng!";
+    resultElement.classList.remove('wrong-answer');
+    resultElement.classList.add('correct-answer');
   } else {
     resultElement.textContent = "Đáp án sai!";
+    resultElement.classList.remove('correct-answer');
+    resultElement.classList.add('wrong-answer');
   }
 }
 

@@ -10,7 +10,25 @@
     <title>Document</title>
 </head>
 <style>
-    
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .popup {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
 </style>
 <body>
     <nav class="navmenu">
@@ -52,10 +70,20 @@
                 </div>
 
                 <div class="clicknext">
-                    <input type="button" value="TRƯỚC" onclick="previousQuestion()" id="previousBtn">
-                    <input type="button" value="SAU" onclick="nextQuestion()" id="nextBtn">
+                    <input type="button" value="TRƯỚC" onclick="goToPreviousQuestion()" id="previousBtn">
+                    <input type="button" value="SAU" onclick="goToNextQuestion()" id="nextBtn">
+                    <input type="button" value="HOÀN THÀNH" id="hoanthanhBtn">
                 </div>
                 <div id="question-buttons"></div>   
+                
+            </div>
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup">
+                    <h2>Popup Window</h2>
+                    <p>This is a popup window content.</p>
+                    <button id="confirmBtn">Xác nhận</button>
+                    <button id="cancelBtn">Hủy</button>
+                </div>
             </div>
         </div>
     </section>
@@ -70,6 +98,35 @@
             nav.classList.toggle('hide');
             content.classList.toggle('expand');
         }
+        var popupOverlay = document.getElementById("popupOverlay");
+        var confirmBtn = document.getElementById("confirmBtn");
+        var cancelBtn = document.getElementById("cancelBtn");
+        var stopBtn = document.getElementById("hoanthanhBtn");
+
+        // Function to show the popup
+        function showPopup() {
+            popupOverlay.style.display = "flex";
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            popupOverlay.style.display = "none";
+        }
+
+        // Function to handle confirm button click
+        function handleConfirm() {
+            // Perform actions when confirmed, e.g., navigate to another page
+            window.location.href = "newpage.html";
+        }
+
+        // Event listener for the stop button
+        stopBtn.addEventListener("click", showPopup);
+
+        // Event listener for the confirm button
+        confirmBtn.addEventListener("click", handleConfirm);
+
+        // Event listener for the cancel button
+        cancelBtn.addEventListener("click", closePopup);
     </script>
 </body>
 </html>

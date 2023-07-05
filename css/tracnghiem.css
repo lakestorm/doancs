@@ -237,3 +237,15 @@ input{
     margin-top: 10px;
     margin-left: 3px;
   }
+  .correct-answer {
+    color: green;
+    padding-top: 10px;
+}
+  .wrong-answer {
+    color: red;
+    padding-top: 10px;
+  }
+  #hoanthanhBtn {
+    margin-left: 10px;
+    width: 150px;
+  }
