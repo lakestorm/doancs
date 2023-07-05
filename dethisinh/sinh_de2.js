@@ -1,5 +1,4 @@
-// dethi.js
-
+//sinh_de2.js
 // Mảng chứa các câu hỏi
 var questions = [
   //1
@@ -284,24 +283,30 @@ var questions = [
   },
 ];
 
+
+
 // Biến chỉ mục câu hỏi hiện tại
 var currentQuestionIndex = 0;
 
-// Hiển thị câu hỏi và các đáp án tương ứng
+// Hiển thị thông tin câu hỏi, số lượng câu hỏi và nút chuyển câu hỏi
 function showQuestion() {
-  var questionContainer = document.getElementById("question");
+  var questionContainer = document.getElementById("question-container");
   var question = questions[currentQuestionIndex];
-  
+  var totalQuestions = questions.length;
+
   var questionHTML = `
-    <div class="question" id="question${currentQuestionIndex + 1}">
-      <h3>Câu ${currentQuestionIndex + 1}: (Độ khó: ${question.difficulty})</h3>
+    <div class="question" id="question-${currentQuestionIndex + 1}">
+      <h3>Câu ${currentQuestionIndex + 1}/${totalQuestions} (Độ khó: ${question.difficulty})</h3>
       <p class="title">${question.question}</p>
       ${generateAnswerOptions(question.answers)}
-      <input type="button" value="XEM KẾT QUẢ" onclick="checkAnswer('question${currentQuestionIndex + 1}', ${question.correctAnswerIndex})" class="check">
-      <p id="result${currentQuestionIndex + 1}"></p>
+      <input type="button" value="XEM KẾT QUẢ" onclick="checkAnswer(${currentQuestionIndex + 1}, ${question.correctAnswerIndex})" class="check">
+      <p id="result-${currentQuestionIndex + 1}"></p>
+    </div>
+    <div class="question-navigation"> 
+      ${generateQuestionButtons(totalQuestions)}
     </div>
   `;
-  
+
   questionContainer.innerHTML = questionHTML;
 }
 
@@ -310,26 +315,37 @@ function generateAnswerOptions(answers) {
   var optionsHTML = "";
   for (var i = 0; i < answers.length; i++) {
     optionsHTML += `
-      <input type="radio" name="question${currentQuestionIndex + 1}" value="${answers[i]}"> ${answers[i]}<br>
+      <input type="radio" name="question-${currentQuestionIndex + 1}" value="${answers[i]}"> ${answers[i]}<br>
     `;
   }
   return optionsHTML;
 }
 
+// Tạo các nút câu hỏi
+function generateQuestionButtons(totalQuestions) {
+  var buttonsHTML = "";
+  for (var i = 0; i < totalQuestions; i++) {
+    buttonsHTML += `
+      <button onclick="goToQuestionIndex(${i})" ${currentQuestionIndex === i ? 'class="active"' : ''}>${i + 1}</button>
+    `;
+  }
+  return buttonsHTML;
+}
+
 // Kiểm tra đáp án và hiển thị kết quả
-function checkAnswer(questionId, correctAnswerIndex) {
-  var selectedOption = document.querySelector(`input[name=${questionId}]:checked`);
-  var resultElement = document.getElementById(`result${questionId.slice(-1)}`);
-  
-  if (selectedOption && selectedOption.value === questions[currentQuestionIndex].answers[correctAnswerIndex]) {
+function checkAnswer(questionIndex, correctAnswerIndex) {
+  var selectedOption = document.querySelector(`input[name=question-${questionIndex}]:checked`);
+  var resultElement = document.getElementById(`result-${questionIndex}`);
+
+  if (selectedOption && selectedOption.value === questions[questionIndex - 1].answers[correctAnswerIndex]) {
     resultElement.textContent = "Đáp án đúng!";
   } else {
     resultElement.textContent = "Đáp án sai!";
   }
 }
 
-// Chuyển đến câu hỏi trước
-function previousQuestion() {
+// Chuyển đến câu hỏi trước đó
+function goToPreviousQuestion() {
   if (currentQuestionIndex > 0) {
     currentQuestionIndex--;
     showQuestion();
@@ -337,9 +353,28 @@ function previousQuestion() {
 }
 
 // Chuyển đến câu hỏi tiếp theo
-function nextQuestion() {
-  if (currentQuestionIndex < questions.length - 1) {
+function goToNextQuestion() {
+  var totalQuestions = questions.length;
+  if (currentQuestionIndex < totalQuestions - 1) {
     currentQuestionIndex++;
+    showQuestion();
+  }
+}
+
+// Chuyển đến câu hỏi theo chỉ mục
+function goToQuestionIndex(index) {
+  if (index >= 0 && index < questions.length) {
+    currentQuestionIndex = index;
+    showQuestion();
+  }
+}
+
+// Chuyển đến câu hỏi cụ thể
+function goToQuestion() {
+  var gotoQuestionInput = document.getElementById("goto-question-input");
+  var questionNumber = parseInt(gotoQuestionInput.value);
+  if (!isNaN(questionNumber) && questionNumber >= 1 && questionNumber <= questions.length) {
+    currentQuestionIndex = questionNumber - 1;
     showQuestion();
   }
 }
