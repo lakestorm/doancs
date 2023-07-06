@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/monthi_batdau.css">
+    
+    <link rel="stylesheet" href="css/sinh_batdau.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <section class="content">
+        <div id="tittle">
+            <h3>Thi Thử Đề Thi THPT Quốc Gia</h3>
+            <h4>Đề thi thử PTTH môn Toán - Đề thi số 1</h4>
+            <button class="btn-start" id="btn-start" onclick="openPopup()">
+                <i class="fa-regular fa-pen-to-square"></i>
+                <b>BẮT ĐẦU LÀM BÀI</b>
+            </button>
+            <div class="popup" id="popup">
+                <h2>Chú Ý</h2>
+                <hr>
+                <p>Thời gian làm bài sẽ bắt đầu tính. Khi thời gian làm bài còn 2 phút, đồng hồ sẽ chuyển sang màu đỏ. Bạn nên chọn câu trả lời cho các câu hỏi còn lại, và nộp bài. Sau khi hết thời gian bạn không thể thay đổi câu trả lời. Kết quả sẽ xuất hiện sau khi bạn ấn Nộp Bài.</p>
+                <div class="btn-bt">
+                    <button type="button" class="btn-huy" onclick="closePopup()">Trở Về</button>
+                    <button type="button" class="btn-batdau" onclick="chuyentrang()">Bắt Đầu</button>
+                </div>
+             </div>
+        </div>
+        <div id="detail">
+            <div class="kgiandetail">
+                <div class="socau">
+                    <i class="fa fa-book"></i>
+                    <span>
+                        <b>50</b>
+                        Câu hỏi
+                    </span>
+                </div>
+                <div class="thoigian">
+                    <i class="fa-solid fa-clock"></i>   
+                    <span>
+                        <b>90</b>
+                        Phút
+                    </span>
+                </div>
+                <div class="diemcaonhat">
+                    <i class="fa fa-star"></i>
+                    <span>
+                        Điểm cao nhất:
+                        <a href="#" class="disable-link" title="Thi bởi: Bảo Hồ - Bạn có thể out trình bạn này không ?" style="text-decoration: none;">
+                            <b>11.00</b>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div id="phanloai">
+            <div class="kgiantable">
+                <table> 
+                    <tr>
+                        <td colspan="3" class="tieudetable">Bảng phân loại câu hỏi trong đề thi:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <th style="padding-left: 15px;">#</th>
+                        <th>Dạng Câu Hỏi</th>
+                        <th>Số Câu Hỏi</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Bất Phương Trình</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Hàm Số - Giới Hạn</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Hàm Số - Đồ Thị</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Hình Học Giải Tích</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Hình Học Không Gian</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mũ - Lũy Thừa</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Số Phức</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Tích Phân - Đạo Hàm</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Tổ Hợp - Xác Suất</td>
+                        <td>3</td>
+                    </tr>
+                    <tr style="height: 3rem;">
+                        <td></td>
+                        <td><b>Tổng Số</b></td>
+                        <td><b>50</b></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    let popup = document.getElementById("popup");
+
+    function openPopup() {
+        event.preventDefault();
+        popup.classList.add("open-popup");
+    }
+    function closePopup() {
+        event.preventDefault();
+        window.location.href = "toan_batdau.html";
+    }
+    function chuyentrang() {
+        event.preventDefault();
+        window.location.href = "../dethitoan/toan_de1.html";
+    }
+ </script>
+</html>

@@ -6,28 +6,28 @@ var questions = [
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions.</b><br>If you have any problem, please call Ann. She'll always____________a sympathetic ear.",
       answers: ['A. bring','B. borrow', 'C. give', 'D. lend'],
       correctAnswerIndex: 3,
-      difficulty: "Dễ"
+      difficulty: "Khó"
     },
     //2
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions.</b><br>Everyone likes him,_______?",
       answers: ["A. doesn't he", "B. doesn't she", "C. don't they", "D. don't you"],
       correctAnswerIndex: 2,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //3
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions.</b><br>His brother refuses to even listen to anyone else's point of view. He is very_____.",
       answers: ["A. open-minded", "B. absent-minded", "C. narrow-minded", "D. kind-hearted"],
       correctAnswerIndex: 2,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //4
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions.</b><br>If I___________it was a formal party, I wouldn't have worn my old jeans and a jumper.",
       answers: ["A. knew", "B. could know", "C. had been knowing", "D. had known"],
       correctAnswerIndex: 3,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //5
     {
@@ -48,14 +48,14 @@ var questions = [
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions.</b><br>Henry was a studious student. He needed no__________to work hard.",
       answers: ["A. encourage", "B. encouraged", "C. encouragement", "D. encouraging"],
       correctAnswerIndex: 2,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //8
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions.</b><br>I finally_______the cold that I had had all week.",
       answers: ["A. pass out", "B. get over", "C. come down with", "D. pull through"],
       correctAnswerIndex: 1,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //9
     {
@@ -69,7 +69,7 @@ var questions = [
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions.</b><br>They________enthusiastically when their teacher in.",
       answers: ["A. will discuss/will come", "B. will have discussed/comes", "C. were discussing/came", "D. discuss/comes"],
       correctAnswerIndex: 2,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //11
     {
@@ -83,28 +83,28 @@ var questions = [
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions.</b><br>The earthquake, and tsunami that followed, has killed over 1300 people, the majority of ______were in the city of Palu in Central Sulawesi, Indonesia.",
       answers: ["A. which", "B. them", "C. that", "D. whom"],
       correctAnswerIndex: 3,
-      difficulty: "Trung bình"
+      difficulty: "Rất Khó"
     },
     //13
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the word whose underlined part is pronounced differently from that of the others.</b><br>",
       answers: ["A. approached", "B. supported", "C. noticed", "D. finished"],
       correctAnswerIndex: 1,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //14
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the word whose underlined part is pronounced differently from that of the others.</b>",
       answers: ["A. threaten", "B. through", "C. thunder", "D. them"],
       correctAnswerIndex: 3,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //15
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the word which is stressed differently from the rest.</b>",
       answers: ["A. prefer", "B. profile", "C. promote", "D. regret"],
       correctAnswerIndex: 1,
-      difficulty: "Trung bình"
+      difficulty: "Khó"
     },
     //16
     {
@@ -118,42 +118,42 @@ var questions = [
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the underlined word or phrase in each sentence that needs correcting.</b><br><b><u>Having found</u></b> guilty <b><u>of</u></b> racketeering, the mobster <b><u>was sentenced</u></b> to <b><u>a number</u></b> of years in prison.",
       answers: ["A. Having found", "B. of", "C. was sentenced", "D. a number"],
       correctAnswerIndex: 0,
-      difficulty: "Trung bình"
+      difficulty: "Khó"
     },
     //18
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the underlined word or phrase in each sentence that needs correcting.</b><br><b><u>Most</u></b> people consider it women's <b><u>responsible</u></b> to take care <b><u>of</u></b> children and <b><u>do</u></b> housework.",
       answers: ["A. Most", "B. responsible", "C. of", "D. do"],
       correctAnswerIndex: 1,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //19
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the underlined word or phrase in each sentence that needs correcting.</b><br>They have made <b><u>a lot of </u></b>progress <b><u>until</u></b> the country <b><u>became</u></b> <b><u>independent</u></b>.",
       answers: ["A. a lot of", "B. until", "C. became", "D. independent"],
       correctAnswerIndex: 1,
-      difficulty: "Trung bình"
+      difficulty: "Khó"
     },
     //20
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the most suitable response to complete each of the following exchanges.</b><br>Marry and Janet are at the dancing club.<br>- Marry: “You are a great dancer. I wish I could do half as well as you.”<br>- Janet: “_______. I'm an awful dancer.”",
       answers: ["A. You're too kind.", "B. That's a nice compliment!", "C. You've got to be kidding!", "D. Oh, thank you very much"],
       correctAnswerIndex: 2,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //21
     {
       question: "<b>Mark the letter A, B, C or D on your answer sheet to indicate the most suitable response to complete each of the following exchanges.</b><br>Hoa and Laura are talking about their volunteer work.<br>- Hoa: “Thank you very much for helping the disadvantaged children here.”<br>- Laura: “_________.”",
       answers: ["A. That's nice of you!", "B. It's our pleasure.", "C. Sorry, we don't know.", "D. What a pity!"],
       correctAnswerIndex: 1,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //22
     {
       question: "<b>Mark the letter A, B, C, or D on your answer sheet to indicate the word or phrase that is OPPOSITE in meaning to the underlined part in each of the following questions.</b><br>Vietnamese have a strong sense of <b><u>hospitality</u></b> and feel embarrassed if they cannot show their guests full respect by preparing for their interval.",
       answers: ["A. difference", "B. unfriendliness", "C. generosity", "D. politeness"],
       correctAnswerIndex: 1,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //23
     {
@@ -167,14 +167,14 @@ var questions = [
       question: "<b>Mark the letter A, B, C, or D on your answer sheet to indicate the word or phrase that is CLOSEST in meaning to the underlined part in each of the following questions.</b><br><b><u>Be careful!</u></b> The tree is going to fall.",
       answers: ["A. Look on", "B. Look up", "C. Look out", "D. Look after"],
       correctAnswerIndex: 2,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //25
     {
       question: "<b>Mark the letter A, B, C, or D on your answer sheet to indicate the word or phrase that is CLOSEST in meaning to the underlined part in each of the following questions.</b><br>The year 2000 can be considered as a milestone for the hearing-impaired as the Nippon Foundation<b><u> launched </u></b>a disability support project.",
       answers: ["A. send", "B. carried out", "C. began", "D. gave"],
       correctAnswerIndex: 2,
-      difficulty: "Trung bình"
+      difficulty: "Rất khó"
     },
     //26
     {
@@ -188,28 +188,28 @@ var questions = [
       question: "<b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the correct word for each of the blanks from 26 to 30.</b>",
       answers: ["A. ", "B. ", "C. ", "D. "],
       correctAnswerIndex: 1,
-      difficulty: "Trung bình"
+      difficulty: "Dễ"
     },
     //28
     {
       question: "<b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the correct word for each of the blanks from 26 to 30.</b>Rules are needed to maintain a harmonious relationship (28)_________family members. Parents are there the pillars of the family and guide children to be responsible and practice good values. Rules teach children to become more responsible and have discipline not only at home but especially outside of the home. When there are rules to follow, children will know (29)_____they should do or should not do. Rules help to avoid conflict and misunderstanding that may lead to fights and aggression especially among children. Parents should set rules for the children to follow to avoid quarrels and fights. There are times when the children fight over simple matters and this happens if the parents do or not interfere but when parents set the rule and let the children follow, there will be (30)_____conflicts.",
       answers: ["A. in", "B. between", "C. inside", "D. among"],
       correctAnswerIndex: 3,
-      difficulty: "Trung b├¼nh"
+      difficulty: "Khó"
     },
     //29
     {
       question: "<b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the correct word for each of the blanks from 26 to 30.</b><br>Rules teach children to become more responsible and have discipline not only at home but especially outside of the home. When there are rules to follow, children will know (29)_____they should do or should not do. Rules help to avoid conflict and misunderstanding that may lead to fights and aggression especially among children. Parents should set rules for the children to follow to avoid quarrels and fights. There are times when the children fight over simple matters and this happens if the parents do or not interfere but when parents set the rule and let the children follow, there will be (30)_____conflicts.(29)_____",
       answers: ["A. which", "B. that", "C. how", "D. what"],
       correctAnswerIndex: 3,
-      difficulty: "Trung b├¼nh"
+      difficulty: "Dễ"
     },
     //30
     {
       question: "<b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the correct word for each of the blanks from 26 to 30.</b><br>Rules teach children to become more responsible and have discipline not only at home but especially outside of the home. When there are rules to follow, children will know (29)_____they should do or should not do. Rules help to avoid conflict and misunderstanding that may lead to fights and aggression especially among children. Parents should set rules for the children to follow to avoid quarrels and fights. There are times when the children fight over simple matters and this happens if the parents do or not interfere but when parents set the rule and let the children follow, there will be (30)_____conflicts.(29)_____",
       answers: ["A. less", "B. more", "C. little", "D. fewer"],
       correctAnswerIndex: 3,
-      difficulty: "Trung b├¼nh"
+      difficulty: "Rất khó"
     },
   ];
   
