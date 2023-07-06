@@ -141,7 +141,7 @@ input{
 .navmenu ul li:hover .sub-menu {
   display: block;
   position: absolute;
-  top: 547px;
+  top: 503px;
   left: 100%;
 }
 
