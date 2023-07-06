@@ -267,4 +267,12 @@ input{
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-} 
+}
+#confirmBtn {
+  width: 100px;
+  border-radius: 5px;
+}
+#cancelBtn {
+  width: 50px;
+  border-radius: 5px;
+}
