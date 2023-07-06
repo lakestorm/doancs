@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/rest.css">
     <link rel="stylesheet" href="../css/tracnghiem.css">
     <link rel="icon" href="./images/BH.png">
-    <title>Document</title>
+    <title>Đề Anh</title>
 </head>
 <style>
     
@@ -45,6 +45,7 @@
                 <div id="header">
                     <h1>Đề thi thử môn Tiếng Anh 2019 - PTTH Bỉm Sơn Thanh Hóa - Lần 12</h1>
                 </div>
+                <div class="timer" id="timer">60:00</div>
             
                 <div id="question">
                     <div class="question" id="question-container">
@@ -62,7 +63,7 @@
             </div>
             <div class="popup-overlay" id="popupOverlay">
                 <div class="popup">
-                    <h2 style="font-size: 30px;">Chú Ý</h2>
+                    <h2 class="chuy"">Chú Ý</h2>
                     <p>Bạn muốn hoàn thành bài làm ?</p>
                     <button id="confirmBtn">Xác nhận</button>
                     <button id="cancelBtn">Hủy</button>
@@ -110,6 +111,34 @@
 
         // Event listener for the cancel button
         cancelBtn.addEventListener("click", closePopup);
+
+        var timerElement = document.getElementById("timer");
+        var minutes = 60
+        var seconds = 0;
+
+        function startTimer() {
+            var interval = setInterval(function() {
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        clearInterval(interval);
+                        // Perform actions when time is up
+                        timerElement.textContent = "Hết giờ!";
+                        // Add your logic here for handling time up event
+                    } else {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+
+                var formattedMinutes = String(minutes).padStart(2, "0");
+                var formattedSeconds = String(seconds).padStart(2, "0");
+                timerElement.textContent = formattedMinutes + ":" + formattedSeconds;
+            }, 1000);
+        }
+
+        startTimer();
     </script>
 </body>
 </html>

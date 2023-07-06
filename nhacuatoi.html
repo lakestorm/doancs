@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/silder_danhgia.css">
     <link rel="icon" href="./images/BH.png">
+    <link rel="stylesheet" href="css/dangxuat.css">
 </head>
 <body>
     <nav class="navmenu">
@@ -39,8 +40,16 @@
                 <a href="./lienhe.html"><i class="fa-solid fa-phone"></i>Liên hệ</a>
             </li>
             <li>
-                <a href="./home.html"><i class="fa-solid fa-right-to-bracket"></i>Đăng xuất</a>
+                <a href="#" id="popupLink"><i class="fa-solid fa-right-to-bracket"></i>Đăng xuất</a>
             </li>
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup" style="font-family: Arial, Helvetica, sans-serif;">
+                    <h2 style="font-size: 10px;">Chú Ý</h2>
+                    <p>Bạn chắc chắn muốn đăng xuất?</p>
+                    <button id="confirmBtn">Xác nhận</button>
+                    <button id="cancelBtn">Hủy</button>
+                </div>
+            </div>
         </ul>
     </nav>
 
@@ -975,6 +984,7 @@
         
     </section>
 </body>
+<script src="js/dangxuat.js"></script>
 <script>
     const nav =document.querySelector('nav');
     const toggle_menu =document.querySelector('.toggle_menu');
