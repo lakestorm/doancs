@@ -15,8 +15,9 @@ body{
   background: url("/images/aaa.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-
+  background-size: 100%;
 }
+
 input{
   font-family: 'Roboto', sans-serif !important;
 }
@@ -221,6 +222,8 @@ input{
   text-align: center;
   height: 6rem;
   font-size: 1.3rem;
+  color: #1e90ff;
+  font-size: 40px;
 }
 .image-preview {
     width: 60px;
