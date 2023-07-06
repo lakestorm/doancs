@@ -45,7 +45,7 @@
                 <div id="header">
                     <h1>Đề Thi Thử THPT Quốc Gia Môn Sinh Học, Năm 2020 – Bộ GD&ĐT – Lần 2</h1>
                 </div>
-            
+                <div class="timer" id="timer">50:00</div>
                 <div id="question">
                     <div class="question" id="question-container">
                     
@@ -110,6 +110,34 @@
 
         // Event listener for the cancel button
         cancelBtn.addEventListener("click", closePopup);
+
+        var timerElement = document.getElementById("timer");
+        var minutes = 50
+        var seconds = 0;
+
+        function startTimer() {
+            var interval = setInterval(function() {
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        clearInterval(interval);
+                        // Perform actions when time is up
+                        timerElement.textContent = "Hết giờ!";
+                        // Add your logic here for handling time up event
+                    } else {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+
+                var formattedMinutes = String(minutes).padStart(2, "0");
+                var formattedSeconds = String(seconds).padStart(2, "0");
+                timerElement.textContent = formattedMinutes + ":" + formattedSeconds;
+            }, 1000);
+        }
+
+        startTimer();
     </script>
 </body>
 </html>

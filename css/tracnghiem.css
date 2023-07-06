@@ -245,6 +245,14 @@ input{
     color: red;
     padding-top: 10px;
   }
+  .timer {
+    padding: 3px 15px;
+    background-color: #6c757d;
+    color: #fff;
+    float: right;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
   #hoanthanhBtn {
     margin-left: 10px;
     width: 150px;
