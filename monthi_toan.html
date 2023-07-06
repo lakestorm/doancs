@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>
-    ĐỀ TOÁN
+    Môn Toán
 </title>
 <link rel="stylesheet" href="./css/rest.css">
 <link rel="stylesheet" href="./css/home.css">
@@ -35,9 +35,9 @@
                     <a href=""><i class="fa-solid fa-book"></i>Môn thi</a>
                     <ul class="sub-menu">
                         <li><a href="./monthi_toan.html"><i class="fa-solid fa-calculator"></i>Toán</a></li>
-                    <li><a href="./monthi_sinh.html"><i class="fa-solid fa-dna"></i>Sinh</a></li>
-                    <li><a href="./monthi_li.html"><i class="fa-solid fa-gears"></i>Vật lí</a></li>
-                    <li><a href="./monthi_tienganh.html"><i class="fa-solid fa-language"></i>Tiếng anh</a></li>
+                        <li><a href="./monthi_sinh.html"><i class="fa-solid fa-dna"></i>Sinh</a></li>
+                        <li><a href="./monthi_li.html"><i class="fa-solid fa-gears"></i>Vật lí</a></li>
+                        <li><a href="./monthi_tienganh.html"><i class="fa-solid fa-language"></i>Tiếng anh</a></li>
                         <!-- Thêm các mục môn thi khác tại đây -->
                       </ul>
                 </li>
@@ -47,6 +47,14 @@
                 <li>
                     <a href="#" id="popupLink"><i class="fa-solid fa-right-to-bracket"></i>Đăng xuất</a>
                 </li>
+                <div class="popup-overlay" id="popupOverlay">
+                    <div class="popup" style="font-family: Arial, Helvetica, sans-serif;">
+                        <h2 style="font-size: 30px;">Chú Ý</h2>
+                        <p>Bạn chắc chắn muốn đăng xuất?</p>
+                        <button id="confirmBtn">Xác nhận</button>
+                        <button id="cancelBtn">Hủy</button>
+                    </div>
+                </div>
             </ul>
         </nav>
     
@@ -64,7 +72,7 @@
                         
                          
                                                     <div id="fb-root"></div>
-                            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=608991086262571&autoLogAppEvents=1"></script>
+                           
                                                 <div class="row justify-content-center">
     <div class="col-12 d-none d-md-block" style="margin:0px;padding:0px;">
         <img src="./images/vku.png" alt="" class="w-100" style="height:180px;">
@@ -95,7 +103,7 @@
            
                         <div class="col-12 p-1 text-left">
                 <p class="text-primary h4"><strong> ĐỀ THI ĐẦY ĐỦ</strong> </p> 
-                <!--p><i> Mỗi đề thi gồm có <b>50</b> câu hỏi, xếp theo chủ đề, thời gian làm bài <b>90</b> phút.</i></p-->
+                <!--p><i> Mỗi đề thi gồm có <b>90</b> câu hỏi, xếp theo chủ đề, thời gian làm bài <b>90</b> phút.</i></p-->
             </div>
             <div class="col-12 p-1">
                 <table class="table no-border disptable">
@@ -111,13 +119,13 @@
                                     <div class="box-header">
                                         <div class="col-12 p-1 d-flex">
                                             <div class="col-9 col-md-10 p-1 pull-left fz-4">
-                                            <a class="text-dark" href=""> Đề thi thử THPT quốc gia 2020 - Bộ Giáo Dục - lần 2 </a>
+                                            <a class="text-dark" href="./dethitoan/toan_batdau.html"> Đề thi thử PTTH môn Toán - Đề thi số 1 Lần 2</a>
                                                                                             <img src="/icon/flash_news.gif" alt="" sizes="" srcset="" style="width: 28px;">
                                                                                         </div>
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd352"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="./dethitoan/toan_batdau.html"> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -125,7 +133,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>90 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -133,7 +141,7 @@
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                            <span> Điểm Cao Nhất: <a href="#" onclick="event.preventDefault();" data-toggle="tooltip" title="Thi bởi: le tuyet van - Bạn có thể đạt điểm cao hơn không?"> <b> 9.80 </b> </a> </span>
+                                            <span> Điểm Cao Nhất: <a href="#" onclick="event.preventDefault();" data-toggle="tooltip" title="Thi bởi: Quốc Hoàng - Bạn có thể đạt điểm cao hơn không?"> <b> 9.80 </b> </a> </span>
                                             </div>
                                                                                     </div>
                                     </div>
@@ -146,13 +154,13 @@
                                     <div class="box-header">
                                         <div class="col-12 p-1 d-flex">
                                             <div class="col-9 col-md-10 p-1 pull-left fz-4">
-                                            <a class="text-dark" href="i/351"> Đề thi thử THPT quốc gia 2020 - Bộ Giáo Dục - lần 1 </a>
+                                            <a class="text-dark" href="i/351">  Đề Thi Thử THPT Quốc Gia Môn Toán Học, Năm 2020 – Bộ GD&ĐT – Lần 1</a>
                                                                                             <img src="/icon/flash_news.gif" alt="" sizes="" srcset="" style="width: 28px;">
                                                                                         </div>
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd351"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -160,7 +168,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -175,18 +183,18 @@
                                 </div>
                             </td>
                         </tr>
-                                                <tr data-entry-id="350">
+                                                <tr data-entry-id="390">
                             <td class="p-1 m-1">
                                 <div class="box box-info m-1">
                                     <div class="box-header">
                                         <div class="col-12 p-1 d-flex">
                                             <div class="col-9 col-md-10 p-1 pull-left fz-4">
-                                            <a class="text-dark" href=""> Đề thi thử môn Toán 2020, Trường Hậu Lộc 2 – Thanh Hóa lần 1 </a>
+                                            <a class="text-dark" href=""> Đề Thi Thử THPT Quốc Gia Môn Toán Học, Năm 2019 – Bộ GD&ĐT – </a>
                                                                                         </div>
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd350"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -194,7 +202,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -215,12 +223,12 @@
                                     <div class="box-header">
                                         <div class="col-12 p-1 d-flex">
                                             <div class="col-9 col-md-10 p-1 pull-left fz-4">
-                                            <a class="text-dark" href=""> Đề thi thử môn Toán 2020, PTTH Hoàng Lê Kha – Thanh Hóa lần 1 </a>
+                                            <a class="text-dark" href="">  Đề Thi Chính thức THPT Quốc Gia Môn Toán Học, Năm 2022 – Bộ GD&ĐT –  </a>
                                                                                         </div>
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd349"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -228,7 +236,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -249,12 +257,12 @@
                                     <div class="box-header">
                                         <div class="col-12 p-1 d-flex">
                                             <div class="col-9 col-md-10 p-1 pull-left fz-4">
-                                            <a class="text-dark" href=""> Đề thi thử môn Toán 2020, PTTH Chuyên Thái Bình lần 1 </a>
+                                            <a class="text-dark" href="">  Đề Thi Chính thức THPT Quốc Gia Môn Toán Học, Năm 2021 – Bộ GD&ĐT –  </a>
                                                                                         </div>
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd348"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -262,7 +270,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -283,12 +291,12 @@
                                     <div class="box-header">
                                         <div class="col-12 p-1 d-flex">
                                             <div class="col-9 col-md-10 p-1 pull-left fz-4">
-                                            <a class="text-dark" href=""> Đề thi thử môn Toán 2020, chuyên Phạm Ngọc Hiển – Cà Mau lần 1 </a>
+                                            <a class="text-dark" href="">   Đề Thi Chính thức THPT Quốc Gia Môn Toán Học, Năm 2022 – Bộ GD&ĐT –  </a>
                                                                                         </div>
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd347"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -296,7 +304,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -322,7 +330,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd346"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -330,7 +338,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -356,7 +364,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd345"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -364,7 +372,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -390,7 +398,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd344"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -398,7 +406,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -424,7 +432,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd343"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -432,7 +440,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -458,7 +466,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd342"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -466,7 +474,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -492,7 +500,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd341"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -500,7 +508,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -526,7 +534,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd340"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -534,7 +542,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -560,7 +568,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd339"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -568,7 +576,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -594,7 +602,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd271"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -602,7 +610,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -628,7 +636,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd270"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -636,7 +644,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -662,7 +670,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd269"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -670,7 +678,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -685,108 +693,7 @@
                                 </div>
                             </td>
                         </tr>
-                                                <tr data-entry-id="268">
-                            <td class="p-1 m-1">
-                                <div class="box box-info m-1">
-                                    <div class="box-header">
-                                        <div class="col-12 p-1 d-flex">
-                                            <div class="col-9 col-md-10 p-1 pull-left fz-4">
-                                            <a class="text-dark" href=""> Đề thi thử PTTH môn Toán - Đề thi số 6 </a>
-                                                                                        </div>
-
-                                            <div class="col-3 col-md-2 p-1 pull-right text-right">
-                                                <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd268"> Thi Thử </a> &nbsp;
-                                                                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12 p-1 text-secondary d-flex fz-2">
-                                            <div class="mr-3 p-1">
-                                            <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
-                                            </div>
-                                            <div class="mr-3 p-1">
-                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span>90 Phút </span>
-                                            </div>
-                                            <div class="mr-3 p-1">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <span> Điểm Cao Nhất: <a href="#" onclick="event.preventDefault();" data-toggle="tooltip" title="Thi bởi: Doãn Đức Nhân - Bạn có thể đạt điểm cao hơn không?"> <b> 5.40 </b> </a> </span>
-                                            </div>
-                                                                                    </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                                                <tr data-entry-id="267">
-                            <td class="p-1 m-1">
-                                <div class="box box-info m-1">
-                                    <div class="box-header">
-                                        <div class="col-12 p-1 d-flex">
-                                            <div class="col-9 col-md-10 p-1 pull-left fz-4">
-                                            <a class="text-dark" href=""> Đề thi thử PTTH môn Toán - Đề thi số 5 </a>
-                                                                                        </div>
-
-                                            <div class="col-3 col-md-2 p-1 pull-right text-right">
-                                                <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd267"> Thi Thử </a> &nbsp;
-                                                                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12 p-1 text-secondary d-flex fz-2">
-                                            <div class="mr-3 p-1">
-                                            <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
-                                            </div>
-                                            <div class="mr-3 p-1">
-                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span>90 Phút </span>
-                                            </div>
-                                            <div class="mr-3 p-1">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <span> Điểm Cao Nhất: <a href="#" onclick="event.preventDefault();" data-toggle="tooltip" title="Thi bởi: Đức Ng - Bạn có thể đạt điểm cao hơn không?"> <b> 8.40 </b> </a> </span>
-                                            </div>
-                                                                                    </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                                                <tr data-entry-id="266">
-                            <td class="p-1 m-1">
-                                <div class="box box-info m-1">
-                                    <div class="box-header">
-                                        <div class="col-12 p-1 d-flex">
-                                            <div class="col-9 col-md-10 p-1 pull-left fz-4">
-                                            <a class="text-dark" href=""> Đề thi thử PTTH môn Toán - Đề thi số 4 </a>
-                                                                                        </div>
-
-                                            <div class="col-3 col-md-2 p-1 pull-right text-right">
-                                                <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd266"> Thi Thử </a> &nbsp;
-                                                                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12 p-1 text-secondary d-flex fz-2">
-                                            <div class="mr-3 p-1">
-                                            <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
-                                            </div>
-                                            <div class="mr-3 p-1">
-                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span>90 Phút </span>
-                                            </div>
-                                            <div class="mr-3 p-1">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <span> Điểm Cao Nhất: <a href="#" onclick="event.preventDefault();" data-toggle="tooltip" title="Thi bởi: Trang Thùy - Bạn có thể đạt điểm cao hơn không?"> <b> 4.60 </b> </a> </span>
-                                            </div>
-                                                                                    </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                                                
                                                 <tr data-entry-id="265">
                             <td class="p-1 m-1">
                                 <div class="box box-info m-1">
@@ -798,7 +705,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd265"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -806,7 +713,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -832,7 +739,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd264"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -840,7 +747,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -866,7 +773,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd210"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -874,7 +781,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -900,7 +807,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd52"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -908,7 +815,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -934,7 +841,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd31"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -942,7 +849,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -968,7 +875,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd26"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -976,7 +883,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -1002,7 +909,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd25"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -1010,7 +917,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -1036,7 +943,7 @@
 
                                             <div class="col-3 col-md-2 p-1 pull-right text-right">
                                                 <span class="text-center pb-0">
-                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href="fd2"> Thi Thử </a> &nbsp;
+                                                                                                <a class="btn btn-sm btn-primary p-1" style="width:55px; margin-left: 7px; margin-top:0px;" href=""> Thi Thử </a> &nbsp;
                                                                                                 </span>
                                             </div>
                                         </div>
@@ -1044,7 +951,7 @@
                                         <div class="col-12 p-1 text-secondary d-flex fz-2">
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-book" aria-hidden="true"></i>
-                                            <span>50 Câu Hỏi </span>
+                                            <span>40 Câu Hỏi </span>
                                             </div>
                                             <div class="mr-3 p-1">
                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -1069,11 +976,7 @@
             
         </div>
 
-        <div class="col-12 p-1 pull-center">
-            <div class="col-12 d-flex p-2 ">
-                <div class="fb-comments" data-href="https://thithu.edu.vn/mon_thi?mon_thi=1" data-width="100%" data-numposts="5"></div>
-            </div>
-        </div>
+        
     </div>
 
     <hr>
