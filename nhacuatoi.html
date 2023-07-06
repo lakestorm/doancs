@@ -927,24 +927,21 @@
                                     <input type="radio" name="slider" title="slide3" class="slider__nav" />
                                     <input type="radio" name="slider" title="slide4" class="slider__nav" />
                                     <div class="slider__inner">
-                                        <div class="slider__contents"><i class="slider__image fa fa-bicycle"></i>
+                                        <div class="slider__contents"><i class="fa-solid fa-face-grin-hearts fa-2xl" style="color: #145ddb;"></i>
                                             <h2 class="slider__caption">Quốc Hoàng</h2>
-                                            <p class="slider__txt">Web ai làm mà đỉnh thế</p>
+                                            <p class="slider__txt">Websibte dễ sử dụng và thân thiện với người dùng XD. </p>
                                         </div>
-                                        <div class="slider__contents"><i class="slider__image fa fa-wheelchair-alt"></i>
-                                            <h2 class="slider__caption">para seagame</h2>
-                                            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                At cupiditate omnis possimus illo quos, corporis minima!</p>
+                                        <div class="slider__contents"><i class="fa-solid fa-face-smile-beam fa-2xl" style="color: #0d59de;"></i>
+                                            <h2 class="slider__caption">Hồ Thế Bảo</h2>
+                                            <p class="slider__txt">Tôi rất thích màu sắc và phối màu của trang web này.</p>
                                         </div>
-                                        <div class="slider__contents"><i class="slider__image fa fa-blind"></i>
-                                            <h2 class="slider__caption">Thầy bói</h2>
-                                            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                At cupiditate omnis possimus illo quos, corporis minima!</p>
+                                        <div class="slider__contents"><i class="fa-solid fa-face-grin-wide fa-2xl" style="color: #0962fb;"></i>
+                                            <h2 class="slider__caption">Hứa Chí Bằng</h2>
+                                            <p class="slider__txt">Các đề thi qua các năm được tổng hợp rất đầy đủ ở đây.Web quá hay!!!!</p>
                                         </div>
-                                        <div class="slider__contents"><i class="slider__image fa fa-heartbeat"></i>
-                                            <h2 class="slider__caption">Nhịp tim</h2>
-                                            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                At cupiditate omnis possimus illo quos, corporis minima!</p>
+                                        <div class="slider__contents"><i class="fa-solid fa-face-grin-wink fa-2xl" style="color: #075ef2;"></i>
+                                            <h2 class="slider__caption">Huỳnh Ngọc Khanh</h2>
+                                            <p class="slider__txt">Nhờ website mình đã được ôn tập rất nhiều và đầy đủ .Mình đã sẵn sàng cho kì thi đại học!!!!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -988,5 +985,27 @@
         content.classList.toggle('expand')
     }
     
+</script>
+
+
+<!-- js silder danh gia -->
+<script>
+ 
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var slides = document.getElementsByClassName("slider__nav");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].checked = false;
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].checked = true;
+        setTimeout(carousel, 4000); 
+    }
 </script>
 </html>
