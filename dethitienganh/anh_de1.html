@@ -1,0 +1,114 @@
+<!-- sinh_de2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/rest.css">
+    <link rel="stylesheet" href="../css/tracnghiem.css">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <nav class="navmenu">
+        <div class="toggle_menu"><i class="fa-solid fa-bars"></i></div>
+        <ul>
+            <li>
+                <img src="../images/BH.png" alt="">
+            </li>
+            <li>
+                <a href="../nhacuatoi.html"><i class="fa-sharp fa-solid fa-house"></i>Trang chủ</a>
+            </li>
+
+            <li>
+                <a href="../trangca-nhan.html"><i class="fa-solid fa-person fa-2xl"></i>Trang cá nhân</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-book"></i>Môn thi</a>
+            </li>
+            <li>
+                <a href="../lienhe.html"><i class="fa-solid fa-phone"></i>Liên hệ</a>
+            </li>
+            <li>
+                <a href="../home.html"><i class="fa-solid fa-right-to-bracket"></i>Đăng xuất</a>
+            </li>
+        </ul>
+    </nav>  
+
+    <section class="content-wrapper">
+        <div class="content">
+            <div id="content-main">
+                <div id="header">
+                    <h1>Đề thi thử môn Tiếng Anh 2019 - PTTH Bỉm Sơn Thanh Hóa - Lần 12</h1>
+                </div>
+            
+                <div id="question">
+                    <div class="question" id="question-container">
+                    
+                    </div>
+                </div>
+
+                <div class="clicknext">
+                    <input type="button" value="TRƯỚC" onclick="goToPreviousQuestion()" id="previousBtn">
+                    <input type="button" value="SAU" onclick="goToNextQuestion()" id="nextBtn">
+                    <input type="button" value="HOÀN THÀNH" id="hoanthanhBtn">
+                </div>
+                <div id="question-buttons"></div>   
+                
+            </div>
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup">
+                    <h2 style="font-size: 30px;">Chú Ý</h2>
+                    <p>Bạn muốn hoàn thành bài làm ?</p>
+                    <button id="confirmBtn">Xác nhận</button>
+                    <button id="cancelBtn">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="anh_de1.js"></script>
+    <script>
+        const nav = document.querySelector('nav');
+        const toggle_menu = document.querySelector('.toggle_menu');
+        const content = document.querySelector('.content');
+
+        toggle_menu.onclick = function () {
+            nav.classList.toggle('hide');
+            content.classList.toggle('expand');
+        }
+        var popupOverlay = document.getElementById("popupOverlay");
+        var confirmBtn = document.getElementById("confirmBtn");
+        var cancelBtn = document.getElementById("cancelBtn");
+        var stopBtn = document.getElementById("hoanthanhBtn");
+
+        // Function to show the popup
+        function showPopup() {
+            popupOverlay.style.display = "flex";
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            popupOverlay.style.display = "none";
+        }
+
+        // Function to handle confirm button click
+        function handleConfirm() {
+            // Perform actions when confirmed, e.g., navigate to another page
+            window.location.href = "../dethitienganh/anh_batdau.html";
+        }
+
+        // Event listener for the stop button
+        stopBtn.addEventListener("click", showPopup);
+
+        // Event listener for the confirm button
+        confirmBtn.addEventListener("click", handleConfirm);
+
+        // Event listener for the cancel button
+        cancelBtn.addEventListener("click", closePopup);
+    </script>
+</body>
+</html>
