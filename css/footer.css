@@ -2,7 +2,7 @@
 body{
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
-    font-size: larger;
+   
   }
   *{
     margin:0;
@@ -21,9 +21,10 @@ body{
     list-style: none;
   }
   .footer{
-    background:url("https://static.vecteezy.com/system/resources/thumbnails/012/186/625/small_2x/fast-food-seamless-outline-pattern-design-free-vector.jpg") center ;
     
+    background-image: url(../image/gg.jpg);
       padding: 70px 0;
+      
   }
   .footer-col{
      width: 25%;
@@ -54,7 +55,7 @@ body{
   .footer-col ul li a{
     font-size: 16px;
     text-transform: capitalize;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 300;
     color: rgb(35, 23, 23);
@@ -77,11 +78,11 @@ body{
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: black;
+    color: #fff;
     transition: all 0.5s ease;
   }
   .footer-col .social-links a:hover{
-    color: white;
+    color: black;
     background-color: black;
   }
   

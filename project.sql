@@ -95,12 +95,8 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `name`, `email`, `subject`, `feedback`, `date`, `time`) VALUES
-('55846be776610', 'testing', 'sunnygkp10@gmail.com', 'testing', 'testing stART', '2015-06-19', '09:22:15pm'),
-('5584ddd0da0ab', 'netcamp', 'sunnygkp10@gmail.com', 'feedback', ';mLBLB', '2015-06-20', '05:28:16am'),
-('558510a8a1234', 'sunnygkp10', 'sunnygkp10@gmail.com', 'dl;dsnklfn', 'fmdsfld fdj', '2015-06-20', '09:05:12am'),
-('5585509097ae2', 'sunny', 'sunnygkp10@gmail.com', 'kcsncsk', 'l.mdsavn', '2015-06-20', '01:37:52pm'),
-('5586ee27af2c9', 'vikas', 'vikas@gmail.com', 'trial feedback', 'triaal feedbak', '2015-06-21', '07:02:31pm'),
-('5589858b6c43b', 'nik', 'nik1@gmail.com', 'good', 'good site', '2015-06-23', '06:12:59pm');
+('55846be776610', 'testing', 'sunnygkp10@gmail.com', 'testing', 'testing stART', '2023-12-19', '09:22:15pm'),
+
 
 -- --------------------------------------------------------
 
@@ -124,13 +120,6 @@ CREATE TABLE `history` (
 
 INSERT INTO `history` (`email`, `eid`, `score`, `level`, `sahi`, `wrong`, `date`) VALUES
 ('sunnygkp10@gmail.com', '558921841f1ec', 4, 2, 2, 0, '2015-06-23 09:31:26'),
-('sunnygkp10@gmail.com', '558920ff906b8', 4, 2, 2, 0, '2015-06-23 13:32:09'),
-('avantika420@gmail.com', '558921841f1ec', 4, 2, 2, 0, '2015-06-23 14:33:04'),
-('avantika420@gmail.com', '5589222f16b93', 4, 2, 2, 0, '2015-06-23 14:49:39'),
-('sunnygkp10@gmail.com', '5589741f9ed52', 4, 5, 3, 2, '2015-06-23 15:07:16'),
-('mi5@hollywood.com', '5589222f16b93', 4, 2, 2, 0, '2015-06-23 15:12:56'),
-('nik1@gmail.com', '558921841f1ec', 1, 2, 1, 1, '2015-06-23 16:11:50'),
-('sunnygkp10@gmail.com', '5589222f16b93', 1, 2, 1, 1, '2015-06-24 03:22:38');
 
 -- --------------------------------------------------------
 
@@ -239,23 +228,7 @@ CREATE TABLE `questions` (
 
 INSERT INTO `questions` (`eid`, `qid`, `qns`, `choice`, `sn`) VALUES
 ('558920ff906b8', '55892169bf6a7', 'what is command for changing user information??', 4, 1),
-('558920ff906b8', '5589216a3646e', 'what is permission for view only for other??', 4, 2),
-('558921841f1ec', '558922117fcef', 'what is command for print in php??', 4, 1),
-('558921841f1ec', '55892211e44d5', 'which is a variable of php??', 4, 2),
-('5589222f16b93', '558922894c453', 'what is correct statement in c++??', 4, 1),
-('5589222f16b93', '558922899ccaa', 'which command is use for print the output in c++?', 4, 2),
-('558922ec03021', '558923538f48d', 'what is correct mask for A class IP???', 4, 1),
-('558922ec03021', '55892353f05c4', 'which is not a private IP??', 4, 2),
-('55897338a6659', '558973f4389ac', 'On Linux, initrd is a file', 4, 1),
-('55897338a6659', '558973f4c46f2', 'Which is loaded into memory when system is booted?', 4, 2),
-('55897338a6659', '558973f51600d', ' The process of starting up a computer is known as', 4, 3),
-('55897338a6659', '558973f55d269', ' Bootstrapping is also known as', 4, 4),
-('55897338a6659', '558973f5abb1a', 'The shell used for Single user mode shell is:', 4, 5),
-('5589741f9ed52', '5589751a63091', ' Which command is used to close the vi editor?', 4, 1),
-('5589741f9ed52', '5589751ad32b8', ' In vi editor, the key combination CTRL+f', 4, 2),
-('5589741f9ed52', '5589751b304ef', ' Which vi editor command copies the current line of the file?', 4, 3),
-('5589741f9ed52', '5589751b749c9', ' Which command is used to delete the character before the cursor location in vi editor?', 4, 4),
-('5589741f9ed52', '5589751bd02ec', ' Which one of the following statement is true?', 4, 5);
+
 
 -- --------------------------------------------------------
 
@@ -282,10 +255,7 @@ CREATE TABLE `quiz` (
 INSERT INTO `quiz` (`eid`, `title`, `sahi`, `wrong`, `total`, `time`, `intro`, `tag`, `date`) VALUES
 ('558920ff906b8', 'Linux : File Managment', 2, 1, 2, 5, '', 'linux', '2015-06-23 09:03:59'),
 ('558921841f1ec', 'Php Coding', 2, 1, 2, 5, '', 'PHP', '2015-06-23 09:06:12'),
-('5589222f16b93', 'C++ Coding', 2, 1, 2, 5, '', 'c++', '2015-06-23 09:09:03'),
-('558922ec03021', 'Networking', 2, 1, 2, 5, '', 'networking', '2015-06-23 09:12:12'),
-('55897338a6659', 'Linux:startup', 2, 1, 5, 10, '', 'linux', '2015-06-23 14:54:48'),
-('5589741f9ed52', 'Linux :vi Editor', 2, 1, 5, 10, '', 'linux', '2015-06-23 14:58:39');
+
 
 -- --------------------------------------------------------
 
@@ -304,10 +274,8 @@ CREATE TABLE `rank` (
 --
 
 INSERT INTO `rank` (`email`, `score`, `time`) VALUES
-('sunnygkp10@gmail.com', 9, '2015-06-24 03:22:38'),
-('avantika420@gmail.com', 8, '2015-06-23 14:49:39'),
-('mi5@hollywood.com', 4, '2015-06-23 15:12:56'),
-('nik1@gmail.com', 1, '2015-06-23 16:11:50');
+('baolathe0@gmail.com', 9, '2023-12-24 03:22:38'),
+
 
 -- --------------------------------------------------------
 
@@ -329,15 +297,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`name`, `gender`, `college`, `email`, `mob`, `password`) VALUES
-('Avantika', 'F', 'KNIT sultanpur', 'avantika420@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
-('Mark Zukarburg', 'M', 'Stanford', 'ceo@facebook.com', 987654321, 'e10adc3949ba59abbe56e057f20f883e'),
-('Komal', 'F', 'KNIT sultanpur', 'komalpd2011@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
-('Tom Cruze', 'M', 'Hollywood', 'mi5@hollywood.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
-('Netcamp', 'M', 'KNIT sultanpur', 'netcamp@gmail.com', 987654321, 'e10adc3949ba59abbe56e057f20f883e'),
-('Nikunj', 'M', 'XYZ', 'nik1@gmail.com', 987, '202cb962ac59075b964b07152d234b70'),
-('Sunny', 'M', 'KNIT sultanpur', 'sunnygkp10@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e'),
-('User', 'M', 'cimt', 'user@user.com', 11, 'e10adc3949ba59abbe56e057f20f883e'),
-('Vikash', 'M', 'KNIT sultanpur@gmail.com', 'vikash@gmail.com', 7785068889, 'e10adc3949ba59abbe56e057f20f883e');
+('bao', 'F', 'lakestorm', 'baolathe@gmail.com', 0000, 'e10adc3949ba59abbe56e057f20f883e'),
+
 
 --
 -- Indexes for dumped tables

@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
   <link rel="stylesheet" href="./css/ap.css">
   <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="./css/footer.css">
   <script src="js/jquery.js" type="text/javascript"></script>
 
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="./css/footer.css">
+ 
   <?php if (@$_GET['w']) {
     echo '<script>alert("' . @$_GET['w'] . '");</script>';
   }
@@ -130,7 +131,7 @@
             <div class="form-group">
               <label class="col-md-12 control-label" for="name"></label>
               <div class="col-md-12">
-                <input id="name" name="name" placeholder="Enter your name" class="form-control input-md" type="text">
+                <input id="name" name="name" placeholder="Nhập họ và tên" class="form-control input-md" type="text">
 
               </div>
             </div>
@@ -139,10 +140,10 @@
             <div class="form-group">
               <label class="col-md-12 control-label" for="gender"></label>
               <div class="col-md-12">
-                <select id="gender" name="gender" placeholder="Enter your gender" class="form-control input-md">
-                  <option value="Male">Select Gender</option>
-                  <option value="M">Male</option>
-                  <option value="F">Female</option>
+                <select id="gender" name="gender" placeholder="Giới tính" class="form-control input-md">
+                  <option value="Male">Chọn giới tính</option>
+                  <option value="M">Nam</option>
+                  <option value="F">Nữ</option>
                 </select>
               </div>
             </div>
@@ -151,7 +152,7 @@
             <div class="form-group">
               <label class="col-md-12 control-label" for="name"></label>
               <div class="col-md-12">
-                <input id="college" name="college" placeholder="Enter your college name" class="form-control input-md" type="text">
+                <input id="college" name="college" placeholder="Biệt danh" class="form-control input-md" type="text">
 
               </div>
             </div>
@@ -161,7 +162,7 @@
             <div class="form-group">
               <label class="col-md-12 control-label title1" for="email"></label>
               <div class="col-md-12">
-                <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">
+                <input id="email" name="email" placeholder="Nhập email" class="form-control input-md" type="email">
 
               </div>
             </div>
@@ -170,7 +171,7 @@
             <div class="form-group">
               <label class="col-md-12 control-label" for="mob"></label>
               <div class="col-md-12">
-                <input id="mob" name="mob" placeholder="Enter your mobile number" class="form-control input-md" type="number">
+                <input id="mob" name="mob" placeholder="Số điện thoại" class="form-control input-md" type="number">
 
               </div>
             </div>
@@ -180,7 +181,7 @@
             <div class="form-group">
               <label class="col-md-12 control-label" for="password"></label>
               <div class="col-md-12">
-                <input id="password" name="password" placeholder="Enter your password" class="form-control input-md" type="password">
+                <input id="password" name="password" placeholder="Mật khẩu" class="form-control input-md" type="password">
 
               </div>
             </div>
@@ -188,7 +189,7 @@
             <div class="form-group">
               <label class="col-md-12control-label" for="cpassword"></label>
               <div class="col-md-12">
-                <input id="cpassword" name="cpassword" placeholder="Conform Password" class="form-control input-md" type="password">
+                <input id="cpassword" name="cpassword" placeholder="Nhập lại mật khẩu" class="form-control input-md" type="password">
 
               </div>
             </div>
@@ -199,7 +200,7 @@
             <div class="form-group">
               <label class="col-md-12 control-label" for=""></label>
               <div class="col-md-12">
-                <input type="submit" class="sub" value="sign up" class="btn btn-primary" />
+                <input type="submit" class="sub" value="Đăng kí" class="btn btn-primary" />
               </div>
             </div>
 
@@ -212,8 +213,7 @@
 
  
 
-  <!--Footer start-->
-
+ <!--Footer start-->
  <footer class="footer">
     <div class="container">
       <div class="row">
@@ -221,8 +221,8 @@
           <h4>Liên hệ</h4>
           <ul>
             <li><a href="#"><i class="fa-regular fa-envelope"></i> baolathe0108@gmail.com</a></li>
-            <li><a href="#"><i class="fa-solid fa-phone"></i> 0782087247</a></li>
-            <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i> 61 Đoàn Nguyễn Tuấn</a></li>
+            <li><a href="./feedback.php"><i class="fa-solid fa-phone"></i>Phản hồi </a></li>
+            <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i></a></li>
 
           </ul>
         </div>
@@ -230,10 +230,10 @@
           <h4>Người phụ trách</h4>
           <ul>
             <li><a href="#" data-toggle="modal" data-target="#developers">Developers</a></li>
-            <li><a href="./feedback.php" target="_blank">Feedback</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment options</a></li>
+            <li><a href="#" ></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -268,13 +268,13 @@
           <p>
           <div class="row">
             <div class="col-md-4">
-              <img src="image/CAM00121.jpg" width=100 height=100 alt="Sunny Prakash Tiwari" class="img-rounded">
+              <img src="" width=100 height=100 alt="" class="img-rounded">
             </div>
             <div class="col-md-5">
-              <a href="http://yugeshverma.blogspot.in" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook">Yugesh Verma</a>
-              <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+91 9165063741</h4>
-              <h4 style="font-family:'typo' ">vermayugesh323@gmail.com</h4>
-              <h4 style="font-family:'typo' ">Chhattishgarh insitute of management & Technology ,bhilai</h4>
+              <a href="" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook">Hồ Thế Bảo</a>
+              <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">0782087247</h4>
+              <h4 style="font-family:'typo' ">baolathe0108@gmail.com</h4>
+              <h4 style="font-family:'typo' ">Đà Nẵng</h4>
             </div>
           </div>
           </p>

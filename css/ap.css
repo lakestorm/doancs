@@ -108,7 +108,7 @@ hr {
 
 .log1 {
     font: 15px 'Ubuntu', sans-serif;
-    color: rgb(12, 101, 190);
+    color: #3182d5;
     margin-left: 10px;
 }
 
@@ -116,16 +116,16 @@ hr {
     margin: 10px;
     margin-right: 60px;
     margin-left: 5px;
-    color: rgb(12, 101, 190);
+    color: #3182d5;
     text-decoration: none;
     font-size: 20px;
     font-size: 15px;
 }
 
 .log:hover {
-    color: #fff;
+    color: #9acd32;
     border-top: 2px solid;
-    border-color: rgb(12, 101, 190);
+    border-color: orange;
     text-decoration: none;
 }
 

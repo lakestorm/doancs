@@ -104,21 +104,21 @@
           <?php if (@$_GET['q']) echo '<span style="font-size:18px;"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;' . @$_GET['q'] . '</span>';
           else {
             echo ' 
-You can send us your feedback through e-mail on the following e-mail id:<br />
+<br />
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-10">
-<a href="mailto:chiraggoel.53784@gmail.com" style="color:#000000">sunnygkp10@gmail.com</a><br /><br />
+<a href="" style="color:#000000"></a><br /><br />
 </div><div class="col-md-1"></div></div>
-<p>Or you can directly submit your feedback by filling the enteries below:-</p>
+<p></p>
 <form role="form"  method="post" action="feed.php?q=feedback.php">
 <div class="row">
-<div class="col-md-3"><b>Name:</b><br /><br /><br /><b>Subject:</b></div>
+<div class="col-md-3"><b>Tên:</b><br /><br /><br /><b>Nội dung:</b></div>
 <div class="col-md-9">
 <!-- Text input-->
 <div class="form-group">
-  <input id="name" name="name" placeholder="Enter your name" class="form-control input-md" type="text"><br />    
-   <input id="name" name="subject" placeholder="Enter subject" class="form-control input-md" type="text">    
+  <input id="name" name="name" placeholder="Nhập tên" class="form-control input-md" type="text"><br />    
+   <input id="name" name="subject" placeholder="Nhập nội dung" class="form-control input-md" type="text">    
 
 </div>
 </div>
@@ -161,8 +161,8 @@ You can send us your feedback through e-mail on the following e-mail id:<br />
           <h4>Liên hệ</h4>
           <ul>
             <li><a href="#"><i class="fa-regular fa-envelope"></i> baolathe0108@gmail.com</a></li>
-            <li><a href="#"><i class="fa-solid fa-phone"></i> 0782087247</a></li>
-            <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i> 61 Đoàn Nguyễn Tuấn</a></li>
+            <li><a href="./feedback.php"><i class="fa-solid fa-phone"></i>Phản hồi </a></li>
+            <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i></a></li>
 
           </ul>
         </div>
@@ -170,10 +170,10 @@ You can send us your feedback through e-mail on the following e-mail id:<br />
           <h4>Người phụ trách</h4>
           <ul>
             <li><a href="#" data-toggle="modal" data-target="#developers">Developers</a></li>
-            <li><a href="./feedback.php" target="_blank">Feedback</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment options</a></li>
+            <li><a href="#" ></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -208,13 +208,13 @@ You can send us your feedback through e-mail on the following e-mail id:<br />
           <p>
           <div class="row">
             <div class="col-md-4">
-              <img src="image/CAM00121.jpg" width=100 height=100 alt="Sunny Prakash Tiwari" class="img-rounded">
+              <img src="" width=100 height=100 alt="" class="img-rounded">
             </div>
             <div class="col-md-5">
-              <a href="http://yugeshverma.blogspot.in" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook">Yugesh Verma</a>
-              <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+91 9165063741</h4>
-              <h4 style="font-family:'typo' ">vermayugesh323@gmail.com</h4>
-              <h4 style="font-family:'typo' ">Chhattishgarh insitute of management & Technology ,bhilai</h4>
+              <a href="" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook">Hồ Thế Bảo</a>
+              <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">0782087247</h4>
+              <h4 style="font-family:'typo' ">baolathe0108@gmail.com</h4>
+              <h4 style="font-family:'typo' ">Đà Nẵng</h4>
             </div>
           </div>
           </p>

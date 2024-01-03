@@ -137,31 +137,40 @@ var countdownTimer = setInterval('secondPassed()', 1000);
 
 <!--quiz start-->
 <?php
-if(@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
-$eid=@$_GET['eid'];
-$sn=@$_GET['n'];
-$total=@$_GET['t'];
-$q=mysqli_query($con,"SELECT * FROM questions WHERE eid='$eid' AND sn='$sn' " );
-echo '<div class="panel" style="margin:5%">';
-while($row=mysqli_fetch_array($q) )
-{
-$qns=$row['qns'];
-$qid=$row['qid'];
-echo '<b>Question &nbsp;'.$sn.'&nbsp;::<br />'.$qns.'</b><br /><br />';
-}
-$q=mysqli_query($con,"SELECT * FROM options WHERE qid='$qid' " );
-echo '<form action="update.php?q=quiz&step=2&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST"  class="form-horizontal">
-<br />';
+if (@$_GET['q'] == 'quiz' && @$_GET['step'] == 2) {
+    $eid = @$_GET['eid'];
+    $sn = @$_GET['n'];
+    $total = @$_GET['t'];
 
-while($row=mysqli_fetch_array($q) )
-{
-$option=$row['option'];
-$optionid=$row['optionid'];
-echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br />';
+    // Truy vấn để lấy danh sách câu hỏi theo thứ tự ngẫu nhiên
+    $questions_query = mysqli_query($con, "SELECT * FROM questions WHERE eid='$eid' ORDER BY RAND()");
+    
+    echo '<div class="panel" style="margin:5%">';
+    
+    // Lấy câu hỏi và lưu vào biến
+    $question_row = mysqli_fetch_array($questions_query);
+    $qns = $question_row['qns'];
+    $qid = $question_row['qid'];
+    
+    // Hiển thị câu hỏi
+    echo '<b>Question &nbsp;' . $sn . '&nbsp;::<br />' . $qns . '</b><br /><br />';
+    
+    // Truy vấn để lấy danh sách câu trả lời theo thứ tự ngẫu nhiên
+    $options_query = mysqli_query($con, "SELECT * FROM options WHERE qid='$qid' ORDER BY RAND()");
+
+    echo '<form action="update.php?q=quiz&step=2&eid=' . $eid . '&n=' . $sn . '&t=' . $total . '&qid=' . $qid . '" method="POST"  class="form-horizontal"><br />';
+
+    // Hiển thị câu trả lời
+    while ($option_row = mysqli_fetch_array($options_query)) {
+        $option = $option_row['option'];
+        $optionid = $option_row['optionid'];
+
+        echo '<input type="radio" name="ans" value="' . $optionid . '">' . $option . '<br /><br />';
+    }
+
+    echo '<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
 }
-echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
-//header("location:dash.php?q=4&step=2&eid=$id&n=$total");
-}
+
 //result display
 if(@$_GET['q']== 'result' && @$_GET['eid']) 
 {

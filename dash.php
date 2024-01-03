@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Project Worlds || DASHBOARD </title>
+  <title>ADMIN </title>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
   <link rel="stylesheet" href="css/main.css">
@@ -65,7 +65,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="dash.php?q=0"><b>Dashboard</b></a>
+        <a class="navbar-brand" href="dash.php?q=0"><b></b></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -219,7 +219,7 @@
         if (@$_GET['q'] == 4 && !(@$_GET['step'])) {
           echo ' 
 <div class="row">
-<span class="title1" style="margin-left:40%;font-size:30px;"><b>Enter Quiz Details</b></span><br /><br />
+<span class="title1" style="margin-left:40%;font-size:30px;"><b>Tạo đề thi</b></span><br /><br />
 <div class="col-md-3"></div><div class="col-md-6">   <form class="form-horizontal title1" name="form" action="update.php?q=addquiz"  method="POST">
 <fieldset>
 
@@ -228,7 +228,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="name"></label>  
 <div class="col-md-12">
-<input id="name" name="name" placeholder="Enter Quiz title" class="form-control input-md" type="text">
+<input id="name" name="name" placeholder="Tên đề thi" class="form-control input-md" type="text">
 
 </div>
 </div>
@@ -239,7 +239,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="total"></label>  
 <div class="col-md-12">
-<input id="total" name="total" placeholder="Enter total number of questions" class="form-control input-md" type="number">
+<input id="total" name="total" placeholder="Nhập số câu hỏi" class="form-control input-md" type="number">
 
 </div>
 </div>
@@ -248,7 +248,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="right"></label>  
 <div class="col-md-12">
-<input id="right" name="right" placeholder="Enter marks on right answer" class="form-control input-md" min="0" type="number">
+<input id="right" name="right" placeholder="Nhập điểm cho câu trả lời đúng" class="form-control input-md" min="0" type="number">
 
 </div>
 </div>
@@ -257,7 +257,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="wrong"></label>  
 <div class="col-md-12">
-<input id="wrong" name="wrong" placeholder="Enter minus marks on wrong answer without sign" class="form-control input-md" min="0" type="number">
+<input id="wrong" name="wrong" placeholder="Nhập điểm phải trừ khi trả lời sai" class="form-control input-md" min="0" type="number">
 
 </div>
 </div>
@@ -266,7 +266,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="time"></label>  
 <div class="col-md-12">
-<input id="time" name="time" placeholder="Enter time limit for test in minute" class="form-control input-md" min="1" type="number">
+<input id="time" name="time" placeholder="Nhập thời gian để làm đề thi(phút)" class="form-control input-md" min="1" type="number">
 
 </div>
 </div>
@@ -275,7 +275,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="tag"></label>  
 <div class="col-md-12">
-<input id="tag" name="tag" placeholder="Enter #tag which is used for searching" class="form-control input-md" type="text">
+<input id="tag" name="tag" placeholder="Nhập #tag được sử dụng để tìm kiếm" class="form-control input-md" type="text">
 
 </div>
 </div>
@@ -285,7 +285,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="desc"></label>  
 <div class="col-md-12">
-<textarea rows="8" cols="8" name="desc" class="form-control" placeholder="Write description here..."></textarea>  
+<textarea rows="8" cols="8" name="desc" class="form-control" placeholder="Mô tả đề thi"></textarea>  
 </div>
 </div>
 
@@ -308,24 +308,24 @@
         if (@$_GET['q'] == 4 && (@$_GET['step']) == 2) {
           echo ' 
 <div class="row">
-<span class="title1" style="margin-left:40%;font-size:30px;"><b>Enter Question Details</b></span><br /><br />
+<span class="title1" style="margin-left:40%;font-size:30px;"><b>Nhập các câu hỏi</b></span><br /><br />
 <div class="col-md-3"></div><div class="col-md-6"><form class="form-horizontal title1" name="form" action="update.php?q=addqns&n=' . @$_GET['n'] . '&eid=' . @$_GET['eid'] . '&ch=4 "  method="POST">
 <fieldset>
 ';
 
           for ($i = 1; $i <= @$_GET['n']; $i++) {
-            echo '<b>Question number&nbsp;' . $i . '&nbsp;:</><br /><!-- Text input-->
+            echo '<b>Câu &nbsp;' . $i . '&nbsp;:</><br /><!-- Text input-->
 <div class="form-group">
 <label class="col-md-12 control-label" for="qns' . $i . ' "></label>  
 <div class="col-md-12">
-<textarea rows="3" cols="5" name="qns' . $i . '" class="form-control" placeholder="Write question number ' . $i . ' here..."></textarea>  
+<textarea rows="3" cols="5" name="qns' . $i . '" class="form-control" placeholder="Nhập câu ' . $i . ' :"></textarea>  
 </div>
 </div>
 <!-- Text input-->
 <div class="form-group">
 <label class="col-md-12 control-label" for="' . $i . '1"></label>  
 <div class="col-md-12">
-<input id="' . $i . '1" name="' . $i . '1" placeholder="Enter option a" class="form-control input-md" type="text">
+<input id="' . $i . '1" name="' . $i . '1" placeholder="Nhập đáp án A" class="form-control input-md" type="text">
 
 </div>
 </div>
@@ -333,7 +333,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="' . $i . '2"></label>  
 <div class="col-md-12">
-<input id="' . $i . '2" name="' . $i . '2" placeholder="Enter option b" class="form-control input-md" type="text">
+<input id="' . $i . '2" name="' . $i . '2" placeholder="Nhập đáp án B" class="form-control input-md" type="text">
 
 </div>
 </div>
@@ -341,7 +341,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="' . $i . '3"></label>  
 <div class="col-md-12">
-<input id="' . $i . '3" name="' . $i . '3" placeholder="Enter option c" class="form-control input-md" type="text">
+<input id="' . $i . '3" name="' . $i . '3" placeholder="Nhập đáp án C" class="form-control input-md" type="text">
 
 </div>
 </div>
@@ -349,18 +349,18 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="' . $i . '4"></label>  
 <div class="col-md-12">
-<input id="' . $i . '4" name="' . $i . '4" placeholder="Enter option d" class="form-control input-md" type="text">
+<input id="' . $i . '4" name="' . $i . '4" placeholder="Nhập đáp án D" class="form-control input-md" type="text">
 
 </div>
 </div>
 <br />
-<b>Correct answer</b>:<br />
+<b>Đáp án đúng là</b>:<br />
 <select id="ans' . $i . '" name="ans' . $i . '" placeholder="Choose correct answer " class="form-control input-md" >
-<option value="a">Select answer for question ' . $i . '</option>
-<option value="a">option a</option>
-<option value="b">option b</option>
-<option value="c">option c</option>
-<option value="d">option d</option> </select><br /><br />';
+<option value="a">Chọn câu trả lời đúng cho câu ' . $i . '</option>
+<option value="a">Đáp án A</option>
+<option value="b">Đáp án B</option>
+<option value="c">Đáp án C</option>
+<option value="d">Đáp án D</option> </select><br /><br />';
           }
 
           echo '<div class="form-group">
@@ -375,12 +375,15 @@
         }
         ?><!--add quiz step 2 end-->
 
+
+
+
         <!--remove quiz-->
         <?php if (@$_GET['q'] == 5) {
 
           $result = mysqli_query($con, "SELECT * FROM quiz ORDER BY date DESC") or die('Error');
           echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
-<tr><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Marks</b></td><td><b>Time limit</b></td><td></td></tr>';
+<tr><td><b>STT</b></td><td><b>Chủ đề</b></td><td><b>Tổng số câu hỏi</b></td><td><b>Điểm</b></td><td><b>Thời gian làm bài</b></td><td></td></tr>';
           $c = 1;
           while ($row = mysqli_fetch_array($result)) {
             $title = $row['title'];
