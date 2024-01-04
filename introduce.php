@@ -26,11 +26,11 @@
             <div class="nav-menu menu" id="nav-menu">
                 <!-- begin: header -->
                 <div id="header">
-                    <a href="./introduce.html"><img class="imglogo logo" src="./Assets/Images/logo.png" alt="logo-book"></a>
+                    <a href="./introduce.php"><img class="imglogo logo" src="./Assets/Images/logo.png" alt="logo-book"></a>
                     <a href=""><img class="img-hidden" src="" alt="logo-book"></a>
                     <ul id="nav">
-                        <li><a href="./index.html">TRANG CHỦ</a></li>
-                        <li><a href="./contact.html">ĐĂNG KÍ</a></li>
+                        <li><a href="./introduce.php">TRANG CHỦ</a></li>
+                        <li><a href="./index.php">ĐĂNG KÍ</a></li>
                     </ul>
                 </div>
                 <!-- end: header -->
