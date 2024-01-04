@@ -1,0 +1,197 @@
+/* PC */
+@media (min-width: 1024px) {}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  #header {
+    font-size: 12px;
+  }
+
+
+
+  .content h1 {
+    font-size: 30px;
+
+  }
+
+  .content h3 {
+    font-size: 20px;
+
+  }
+
+  .content .learn-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 30px;
+    margin-top: 50px;
+    padding-top: 10px;
+  }
+
+  .content .learn-btn h4 {
+    font-size: 10px;
+  }
+
+
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+  #nav {
+    display: none;
+  }
+
+  #header .logo {
+    display: none;
+  }
+
+  .img-hidden {
+    width: 25px;
+    padding-top: 10px;
+  }
+
+  .close {
+    display: none !important;
+  }
+
+  .content h1 {
+
+    font-size: 30px;
+  }
+
+  .content h3 {
+    font-size: 20px;
+  }
+
+  .content .learn-btn {
+
+    width: 150px;
+    height: 30px;
+
+    padding-top: 10px;
+  }
+
+  .content .learn-btn h4 {
+    font-size: 10px;
+  }
+
+  .menu-btn {
+    cursor: pointer;
+    float: right;
+    color: black;
+    line-height: 87px;
+    display: inline;
+    font-size: 30px;
+  }
+
+  .menu-scroll-down {
+    background-color: rgba(246, 245, 243, 0);
+}
+
+
+
+
+  #WWD .content-WWD {
+    width: 100%;
+  }
+
+  #WWD .content-WWD .wwd-list {
+    width: 100%;
+
+  }
+
+  #WWD .content-WWD img {
+    margin: 0 0 20px 0;
+  }
+
+  .img-food {
+    display: flex;
+    justify-content: center;
+  }
+
+  .food-img {
+    width: 80%;
+    height: auto;
+  }
+
+  .hover__ff-layer {
+    width: 80%;
+
+    margin: 0 10%;
+  }
+
+  .num-like {
+    font-size: 20px;
+    height: 30px;
+    top: 10px;
+    right: 10%;
+
+    line-height: 30px;
+  }
+}
+
+
+
+
+
+@media (min-width: 741px) and (max-width: 991px) {
+  #WWD .content-WWD {
+    width: 80%;
+  }
+
+  #WWD .content-WWD .wwd-list {
+    width: 100%;
+
+  }
+
+  #WWD .content-WWD img {
+    margin: 0 0 20px 0;
+  }
+
+  .img-food {
+    display: flex;
+    justify-content: center;
+  }
+
+  .food-img {
+    width: 80%;
+    height: 100px;
+
+  }
+
+  .hover__ff-layer {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  .num-like {
+    font-size: 10px;
+    height: 15px;
+    top: 10px;
+    right: 12%;
+
+    line-height: 15px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .content h1 {
+
+    font-size: 20px;
+  }
+
+  .content h3 {
+    font-size: 15px;
+  }
+
+  .content .learn-btn {
+
+    width: 100px;
+    height: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+
+  }
+}

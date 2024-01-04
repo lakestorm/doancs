@@ -1,0 +1,126 @@
+.comment__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 0;
+    border-top: 3px solid #ccc;
+}
+
+.comment {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.comment__slide {
+    width: 20%;
+    transition: 2s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment__slide img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #d47400;
+}
+
+/* css for navigation manual */
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    right: 0;
+    left: 0;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #d47400;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+
+}
+
+#radio2:checked~.first {
+    margin-left: -20%
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+
+}
+
+/* css for automatic navigation */
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    margin-top: 460px;
+}
+.navigation-auto div{
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #d47400;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background:  #d47400;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background:  #d47400;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background:  #d47400;
+}
+.title-comment{
+    margin-top: 10px;
+    color: #d47400;
+}

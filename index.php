@@ -222,7 +222,7 @@
           <ul>
             <li><a href="#"><i class="fa-regular fa-envelope"></i> baolathe0108@gmail.com</a></li>
             <li><a href="./feedback.php"><i class="fa-solid fa-phone"></i>Phản hồi </a></li>
-            <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i></a></li>
+            <li><a href="./introduce.php"><i class="fa-sharp fa-solid fa-location-dot"></i>Giới thiệu</a></li>
 
           </ul>
         </div>
@@ -275,6 +275,7 @@
               <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">0782087247</h4>
               <h4 style="font-family:'typo' ">baolathe0108@gmail.com</h4>
               <h4 style="font-family:'typo' ">Đà Nẵng</h4>
+              
             </div>
           </div>
           </p>
