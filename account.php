@@ -141,6 +141,16 @@ if (@$_GET['q'] == 'quiz' && @$_GET['step'] == 2) {
     $eid = @$_GET['eid'];
     $sn = @$_GET['n'];
     $total = @$_GET['t'];
+    
+    
+    // Đồng hồ 
+    
+
+
+
+
+
+
 
     // Truy vấn để lấy danh sách câu hỏi theo thứ tự ngẫu nhiên
     $questions_query = mysqli_query($con, "SELECT * FROM questions WHERE eid='$eid' ORDER BY RAND()");
