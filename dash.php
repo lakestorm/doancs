@@ -47,7 +47,7 @@
         $name = $_SESSION['name'];;
 
         include_once 'dbConnection.php';
-        echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php" class="log log1">' . $name . '</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Signout</button></a></span>';
+        echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Xin chào,</span> <a href="account.php" class="log log1">' . $name . '</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Đăng xuất</button></a></span>';
       } ?>
 
     </div>
@@ -70,19 +70,19 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li <?php if (@$_GET['q'] == 0) echo 'class="active"'; ?>><a href="dash.php?q=0">Home<span class="sr-only">(current)</span></a></li>
-          <li <?php if (@$_GET['q'] == 1) echo 'class="active"'; ?>><a href="dash.php?q=1">User</a></li>
-          <li <?php if (@$_GET['q'] == 2) echo 'class="active"'; ?>><a href="dash.php?q=2">Ranking</a></li>
-          <li <?php if (@$_GET['q'] == 3) echo 'class="active"'; ?>><a href="dash.php?q=3">Feedback</a></li>
+          <li <?php if (@$_GET['q'] == 0) echo 'class="active"'; ?>><a href="dash.php?q=0">Trang chủ<span class="sr-only">(current)</span></a></li>
+          <li <?php if (@$_GET['q'] == 1) echo 'class="active"'; ?>><a href="dash.php?q=1">Người dùng</a></li>
+          <li <?php if (@$_GET['q'] == 2) echo 'class="active"'; ?>><a href="dash.php?q=2">Xếp hạng</a></li>
+          <li <?php if (@$_GET['q'] == 3) echo 'class="active"'; ?>><a href="dash.php?q=3">Phản hồi</a></li>
           <li class="dropdown <?php if (@$_GET['q'] == 4 || @$_GET['q'] == 5) echo 'active"'; ?>">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quiz<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="dash.php?q=4">Add Quiz</a></li>
-              <li><a href="dash.php?q=5">Remove Quiz</a></li>
+              <li><a href="dash.php?q=4">Thêm Quiz</a></li>
+              <li><a href="dash.php?q=5">Xóa Quiz</a></li>
 
             </ul>
           </li>
-          <li class="pull-right"> <a href="logout.php?q=account.php"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Signout</a></li>
+          <li class="pull-right"> <a href="logout.php?q=account.php"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -171,8 +171,8 @@
         <!--feedback start-->
         <?php if (@$_GET['q'] == 3) {
           $result = mysqli_query($con, "SELECT * FROM `feedback` ORDER BY `feedback`.`date` DESC") or die('Error');
-          echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
-<tr><td><b>S.N.</b></td><td><b>Subject</b></td><td><b>Email</b></td><td><b>Date</b></td><td><b>Time</b></td><td><b>By</b></td><td></td><td></td></tr>';
+          echo  '<div class="feedback_panel"><div class="table-responsive"><table class="table table-striped title1">
+<tr><td><b>S.N.</b></td><td><b>Môn</b></td><td><b>Email</b></td><td><b>Ngày</b></td><td><b>Giờ</b></td><td><b>Bởi</b></td><td></td><td></td></tr>';
           $c = 1;
           while ($row = mysqli_fetch_array($result)) {
             $date = $row['date'];
@@ -293,7 +293,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for=""></label>
 <div class="col-md-12"> 
-<input  type="submit" style="margin-left:45%" class="btn btn-primary" value="Submit" class="btn btn-primary"/>
+<input  type="submit" style="margin-left:45%" class="btn btn-primary" value="Đăng" class="btn btn-primary"/>
 </div>
 </div>
 
@@ -392,7 +392,7 @@
             $time = $row['time'];
             $eid = $row['eid'];
             echo '<tr><td>' . $c++ . '</td><td>' . $title . '</td><td>' . $total . '</td><td>' . $sahi * $total . '</td><td>' . $time . '&nbsp;min</td>
-<td><b><a href="update.php?q=rmquiz&eid=' . $eid . '" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Remove</b></span></a></b></td></tr>';
+<td><b><a href="update.php?q=rmquiz&eid=' . $eid . '" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Xóa</b></span></a></b></td></tr>';
           }
           $c = 0;
           echo '</table></div></div>';
