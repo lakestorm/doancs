@@ -43,7 +43,7 @@ $name = $_SESSION['name'];
 $email=$_SESSION['email'];
 
 include_once 'dbConnection.php';
-echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php?q=1" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=index.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Đăng xuất</button></a></span>';
+echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Xin chào,</span> <a href="account.php?q=1" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=index.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Đăng xuất</button></a></span>';
 }?>
 </div>
 </div></div>
@@ -142,7 +142,6 @@ if (@$_GET['q'] == 'quiz' && @$_GET['step'] == 2) {
     $sn = @$_GET['n'];
     $total = @$_GET['t'];
     
-    
     // Đồng hồ 
     
     // Truy vấn để lấy danh sách câu hỏi theo thứ tự ngẫu nhiên
@@ -188,16 +187,16 @@ $s=$row['score'];
 $w=$row['wrong'];
 $r=$row['sahi'];
 $qa=$row['level'];
-echo '<tr style="color:#66CCFF"><td>Total Questions</td><td>'.$qa.'</td></tr>
-      <tr style="color:#99cc32"><td>right Answer&nbsp;<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td><td>'.$r.'</td></tr> 
-	  <tr style="color:red"><td>Wrong Answer&nbsp;<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></td><td>'.$w.'</td></tr>
-	  <tr style="color:#66CCFF"><td>Score&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span></td><td>'.$s.'</td></tr>';
+echo '<tr style="color:#66CCFF"><td>Tổng số câu hỏi</td><td>'.$qa.'</td></tr>
+      <tr style="color:#99cc32"><td>Số câu trả lời đúng&nbsp;<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td><td>'.$r.'</td></tr> 
+	  <tr style="color:red"><td>Số câu trả lời sai&nbsp;<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></td><td>'.$w.'</td></tr>
+	  <tr style="color:#66CCFF"><td>Điểm&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span></td><td>'.$s.'</td></tr>';
 }
 $q=mysqli_query($con,"SELECT * FROM rank WHERE  email='$email' " )or die('Error157');
 while($row=mysqli_fetch_array($q) )
 {
 $s=$row['score'];
-echo '<tr style="color:#990000"><td>Overall Score&nbsp;<span class="glyphicon glyphicon-stats" aria-hidden="true"></span></td><td>'.$s.'</td></tr>';
+echo '<tr style="color:#990000"><td>Tổng điểm&nbsp;<span class="glyphicon glyphicon-stats" aria-hidden="true"></span></td><td>'.$s.'</td></tr>';
 }
 echo '</table></div>';
 
@@ -237,7 +236,7 @@ if(@$_GET['q']== 3)
 $q=mysqli_query($con,"SELECT * FROM rank  ORDER BY score DESC " )or die('Error223');
 echo  '<div class="panel title"><div class="table-responsive">
 <table class="table table-striped title1" >
-<tr style="color:red"><td><b>Xếp hạng</b></td><td><b>Tên</b></td><td><b>Giới tính</b></td><td><b>Trường</b></td><td><b>Điểm</b></td></tr>';
+<tr style="color:red"><td><b>Xếp hạng</b></td><td><b>Tên</b></td><td><b>Giới tính</b></td><td><b>Đại học</b></td><td><b>Điểm</b></td></tr>';
 $c=0;
 while($row=mysqli_fetch_array($q) )
 {
