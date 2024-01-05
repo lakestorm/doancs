@@ -86,7 +86,7 @@
                   <div class="form-group">
                     <label class="col-md-3 control-label" for="email"></label>
                     <div class="col-md-6">
-                      <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">
+                      <input id="email" name="email" placeholder="Nhập email" class="form-control input-md" type="email">
 
                     </div>
                   </div>
@@ -96,7 +96,7 @@
                   <div class="form-group">
                     <label class="col-md-3 control-label" for="password"></label>
                     <div class="col-md-6">
-                      <input id="password" name="password" placeholder="Enter your Password" class="form-control input-md" type="password">
+                      <input id="password" name="password" placeholder="Nhập mật khẩu" class="form-control input-md" type="password">
 
                     </div>
                   </div>
@@ -301,13 +301,13 @@
             <div class="col-md-6">
               <form role="form" method="post" action="admin.php?q=index.php">
                 <div class="form-group">
-                  <input type="text" name="uname" maxlength="20" placeholder="Admin user id" class="form-control" />
+                  <input type="text" name="uname" maxlength="20" placeholder="Tài khoản" class="form-control" />
                 </div>
                 <div class="form-group">
-                  <input type="password" name="password" maxlength="15" placeholder="Password" class="form-control" />
+                  <input type="password" name="password" maxlength="15" placeholder="Mật khẩu" class="form-control" />
                 </div>
                 <div class="form-group" align="center">
-                  <input type="submit" name="login" value="Login" class="btn btn-primary" />
+                  <input type="submit" name="login" value="Đăng nhập" class="btn btn-primary" />
                 </div>
               </form>
             </div>

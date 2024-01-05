@@ -1,4 +1,5 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
 session_start();
 if (isset($_SESSION["email"])) {
 	session_destroy();
@@ -24,4 +25,5 @@ if ($count == 1) {
 	header("location:account.php?q=1");
 } else
 	header("location:$ref?w=Wrong Username or Password");
-	?>
+}
+?>
