@@ -43,7 +43,7 @@ $name = $_SESSION['name'];
 $email=$_SESSION['email'];
 
 include_once 'dbConnection.php';
-echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php?q=1" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Đăng xuất</button></a></span>';
+echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php?q=1" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=index.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Đăng xuất</button></a></span>';
 }?>
 </div>
 </div></div>
@@ -95,7 +95,7 @@ while($row = mysqli_fetch_array($result)) {
 	$title = $row['title'];
 	$total = $row['total'];
 	$sahi = $row['sahi'];
-    $time = $row['time'];
+  $time = $row['time'];
 	$eid = $row['eid'];
 $q12=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error98');
 $rowcount=mysqli_num_rows($q12);	
@@ -145,13 +145,6 @@ if (@$_GET['q'] == 'quiz' && @$_GET['step'] == 2) {
     
     // Đồng hồ 
     
-
-
-
-
-
-
-
     // Truy vấn để lấy danh sách câu hỏi theo thứ tự ngẫu nhiên
     $questions_query = mysqli_query($con, "SELECT * FROM questions WHERE eid='$eid' ORDER BY RAND()");
     
@@ -218,7 +211,7 @@ if(@$_GET['q']== 2)
 $q=mysqli_query($con,"SELECT * FROM history WHERE email='$email' ORDER BY date DESC " )or die('Error197');
 echo  '<div class="panel title">
 <table class="table table-striped title1" >
-<tr style="color:red"><td><b>S.N.</b></td><td><b>Quiz</b></td><td><b>Question Solved</b></td><td><b>Right</b></td><td><b>Wrong<b></td><td><b>Score</b></td>';
+<tr style="color:red"><td><b>STT</b></td><td><b>Chủ đề</b></td><td><b>Số câu đã làm</b></td><td><b>Số câu đúng</b></td><td><b>Số câu sai<b></td><td><b>Điểm</b></td>';
 $c=0;
 while($row=mysqli_fetch_array($q) )
 {
@@ -244,7 +237,7 @@ if(@$_GET['q']== 3)
 $q=mysqli_query($con,"SELECT * FROM rank  ORDER BY score DESC " )or die('Error223');
 echo  '<div class="panel title"><div class="table-responsive">
 <table class="table table-striped title1" >
-<tr style="color:red"><td><b>Rank</b></td><td><b>Name</b></td><td><b>Gender</b></td><td><b>College</b></td><td><b>Score</b></td></tr>';
+<tr style="color:red"><td><b>Xếp hạng</b></td><td><b>Tên</b></td><td><b>Giới tính</b></td><td><b>Trường</b></td><td><b>Điểm</b></td></tr>';
 $c=0;
 while($row=mysqli_fetch_array($q) )
 {
