@@ -142,3 +142,10 @@ hr {
   #registrationForm.active {
     display: block;
   }
+
+  .feedback_panel {
+    border-color: #eee;
+
+    padding: 20px;
+    font: 15px "Century Gothic", "Times Roman", sans-serif;
+}

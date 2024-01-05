@@ -103,8 +103,8 @@
 
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Log in</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+              <button type="submit" class="btn btn-primary">Đăng nhập</button>
               </fieldset>
               </form>
             </div>

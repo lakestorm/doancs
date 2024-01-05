@@ -40,13 +40,13 @@
       include_once 'dbConnection.php';
       session_start();
       if ((!isset($_SESSION['email']))) {
-        echo '<a href="#" class="pull-right sub1 btn title3" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Signin</a>&nbsp;';
+        echo '<a href="#" class="pull-right sub1 btn title3" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Đăng nhập</a>&nbsp;';
       } else {
-        echo '<a href="logout.php?q=feedback.php" class="pull-right sub1 btn title3"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Signout</a>&nbsp;';
+        echo '<a href="logout.php?q=index.php" class="pull-right sub1 btn title3"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Đăng xuất</a>&nbsp;';
       }
       ?>
 
-      <a href="index.php" class="pull-right btn sub1 title3"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home</a>&nbsp;
+      <a href="index.php" class="pull-right btn sub1 title3"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Nhà</a>&nbsp;
     </div>
   </div>
 
@@ -56,7 +56,7 @@
       <div class="modal-content title1">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title title1"><span style="color:orange">Log In</span></h4>
+          <h4 class="modal-title title1"><span style="color:orange">Đăng nhập</span></h4>
         </div>
         <div class="modal-body">
           <form class="form-horizontal" action="login.php?q=index.php" method="POST">
@@ -67,7 +67,7 @@
               <div class="form-group">
                 <label class="col-md-3 control-label" for="email"></label>
                 <div class="col-md-6">
-                  <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">
+                  <input id="email" name="email" placeholder="Nhập email của bạn" class="form-control input-md" type="email">
 
                 </div>
               </div>
@@ -76,15 +76,15 @@
               <div class="form-group">
                 <label class="col-md-3 control-label" for="password"></label>
                 <div class="col-md-6">
-                  <input id="password" name="password" placeholder="Enter your Password" class="form-control input-md" type="password">
+                  <input id="password" name="password" placeholder="Nhập mật khẩu của bạn" class="form-control input-md" type="password">
 
                 </div>
               </div>
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Log in</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+          <button type="submit" class="btn btn-primary">Đăng nhập</button>
           </fieldset>
           </form>
         </div>
@@ -138,7 +138,7 @@
 <textarea rows="5" cols="8" name="feedback" class="form-control" placeholder="Điền góp ý của bạn ở đây"></textarea>
 </div>
 <div class="form-group" align="center">
-<input type="submit" name="submit" value="Gữi" class="btn btn-primary" />
+<input type="submit" name="submit" value="Gửi" class="btn btn-primary" />
 </div>
 </form>';
           } ?>
