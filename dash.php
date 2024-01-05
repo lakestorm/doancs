@@ -125,7 +125,7 @@
           $q = mysqli_query($con, "SELECT * FROM rank  ORDER BY score DESC ") or die('Error223');
           echo  '<div class="panel title"><div class="table-responsive">
 <table class="table table-striped title1" >
-<tr style="color:red"><td><b>Rank</b></td><td><b>Tên</b></td><td><b>Giới tính</b></tdpanel title><td><b>Đại học</b></td><td><b>Điểm số</b></td></tr>';
+<tr style="color:red"><td><b>Hạng</b></td><td><b>Tên</b></td><td><b>Giới tính</b></tdpanel title><td><b>Đại học</b></td><td><b>Điểm số</b></td></tr>';
           $c = 0;
           while ($row = mysqli_fetch_array($q)) {
             $e = $row['email'];
@@ -257,7 +257,7 @@
 <div class="form-group">
 <label class="col-md-12 control-label" for="wrong"></label>  
 <div class="col-md-12">
-<input id="wrong" name="wrong" placeholder="Nhập điểm phải trừ khi trả lời sai" class="form-control input-md" min="0" type="number">
+<input id="wrong" name="wrong" placeholder="Nhập điểm phải trừ khi trả lời ssai" class="form-control input-md" min="0" type="number">
 
 </div>
 </div>
