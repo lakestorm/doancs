@@ -70,15 +70,15 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li <?php if (@$_GET['q'] == 0) echo 'class="active"'; ?>><a href="dash.php?q=0">Home<span class="sr-only">(current)</span></a></li>
-          <li <?php if (@$_GET['q'] == 1) echo 'class="active"'; ?>><a href="dash.php?q=1">User</a></li>
-          <li <?php if (@$_GET['q'] == 2) echo 'class="active"'; ?>><a href="dash.php?q=2">Ranking</a></li>
-          <li <?php if (@$_GET['q'] == 3) echo 'class="active"'; ?>><a href="dash.php?q=3">Feedback</a></li>
+          <li <?php if (@$_GET['q'] == 0) echo 'class="active"'; ?>><a href="dash.php?q=0">Nhà<span class="sr-only">(current)</span></a></li>
+          <li <?php if (@$_GET['q'] == 1) echo 'class="active"'; ?>><a href="dash.php?q=1">Tài khoản </a></li>
+          <li <?php if (@$_GET['q'] == 2) echo 'class="active"'; ?>><a href="dash.php?q=2">Xếp hạng</a></li>
+          <li <?php if (@$_GET['q'] == 3) echo 'class="active"'; ?>><a href="dash.php?q=3">Phản hồi</a></li>
           <li class="dropdown <?php if (@$_GET['q'] == 4 || @$_GET['q'] == 5) echo 'active"'; ?>">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quiz<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Đề thi<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="dash.php?q=4">Add Quiz</a></li>
-              <li><a href="dash.php?q=5">Remove Quiz</a></li>
+              <li><a href="dash.php?q=4">Thêm đề thi</a></li>
+              <li><a href="dash.php?q=5">Xóa đề thi</a></li>
 
             </ul>
           </li>
@@ -98,7 +98,7 @@
 
           $result = mysqli_query($con, "SELECT * FROM quiz ORDER BY date DESC") or die('Error');
           echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
-<tr><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Marks</b></td><td><b>Time limit</b></td><td></td></tr>';
+<tr><td><b>STT</b></td><td><b>Đề thi</b></td><td><b>Tổng câu hỏi</b></td><td><b>Điểm tổng</b></td><td><b>Thời gian </b></td><td></td></tr>';
           $c = 1;
           while ($row = mysqli_fetch_array($result)) {
             $title = $row['title'];
@@ -110,10 +110,10 @@
             $rowcount = mysqli_num_rows($q12);
             if ($rowcount == 0) {
               echo '<tr><td>' . $c++ . '</td><td>' . $title . '</td><td>' . $total . '</td><td>' . $sahi * $total . '</td><td>' . $time . '&nbsp;min</td>
-<td><b><a href="account.php?q=quiz&step=2&eid=' . $eid . '&n=1&t=' . $total . '" class="pull-right btn sub1" style="margin:0px;background:#99cc32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Start</b></span></a></b></td></tr>';
+<td><b><a href="account.php?q=quiz&step=2&eid=' . $eid . '&n=1&t=' . $total . '" class="pull-right btn sub1" style="margin:0px;background:#99cc32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Thi</b></span></a></b></td></tr>';
             } else {
               echo '<tr style="color:#99cc32"><td>' . $c++ . '</td><td>' . $title . '&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>' . $total . '</td><td>' . $sahi * $total . '</td><td>' . $time . '&nbsp;min</td>
-<td><b><a href="update.php?q=quizre&step=25&eid=' . $eid . '&n=1&t=' . $total . '" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Restart</b></span></a></b></td></tr>';
+<td><b><a href="update.php?q=quizre&step=25&eid=' . $eid . '&n=1&t=' . $total . '" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Làm lại</b></span></a></b></td></tr>';
             }
           }
           $c = 0;
@@ -125,7 +125,7 @@
           $q = mysqli_query($con, "SELECT * FROM rank  ORDER BY score DESC ") or die('Error223');
           echo  '<div class="panel title"><div class="table-responsive">
 <table class="table table-striped title1" >
-<tr style="color:red"><td><b>Rank</b></td><td><b>Name</b></td><td><b>Gender</b></td><td><b>College</b></td><td><b>Score</b></td></tr>';
+<tr style="color:red"><td><b>Xếp hạng</b></td><td><b>Tên</b></td><td><b>Giới tính</b></td><td><b>Biệt danh</b></td><td><b>Điểm</b></td></tr>';
           $c = 0;
           while ($row = mysqli_fetch_array($q)) {
             $e = $row['email'];
@@ -151,7 +151,7 @@
 
           $result = mysqli_query($con, "SELECT * FROM user") or die('Error');
           echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
-<tr><td><b>S.N.</b></td><td><b>Name</b></td><td><b>Gender</b></td><td><b>College</b></td><td><b>Email</b></td><td><b>Mobile</b></td><td></td></tr>';
+<tr><td><b>STT</b></td><td><b>Tên</b></td><td><b>Giới tính</b></td><td><b>Biệt danh</b></td><td><b>Email</b></td><td><b>Số điện thoại</b></td><td></td></tr>';
           $c = 1;
           while ($row = mysqli_fetch_array($result)) {
             $name = $row['name'];
@@ -172,7 +172,7 @@
         <?php if (@$_GET['q'] == 3) {
           $result = mysqli_query($con, "SELECT * FROM `feedback` ORDER BY `feedback`.`date` DESC") or die('Error');
           echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
-<tr><td><b>S.N.</b></td><td><b>Subject</b></td><td><b>Email</b></td><td><b>Date</b></td><td><b>Time</b></td><td><b>By</b></td><td></td><td></td></tr>';
+<tr><td><b>STT</b></td><td><b>Chủ đề</b></td><td><b>Email</b></td><td><b>Ngày gữi</b></td><td><b>Thời gian</b></td><td><b>Bởi</b></td><td></td><td></td></tr>';
           $c = 1;
           while ($row = mysqli_fetch_array($result)) {
             $date = $row['date'];
